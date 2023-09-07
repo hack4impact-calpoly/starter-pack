@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+    Lab 8 - Create a Project
+  </title>
+  <meta charset="UTF-8" />
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+  <meta "="" content=" width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="A guided tour through the fundamentals of Git, HTML, & CSS" name=" description" />
+  <meta content="#0000ff" name="theme-color" />
+  <link href="manifest.json" rel="manifest" />
+  <link href="css/reset.css" media="screen" rel="stylesheet" />
+  <link href="css/screen.css" media="screen" rel="stylesheet" />
+  <link href="css/prism.css" rel="stylesheet" />
+</head>
+
+<body data-lab-id="8">
+  <a class="skip-to-content" href="#content" tabindex="1">
+    Skip to content
+  </a>
+  <main class="layout">
+    <nav id="index">
+      <p class="link-home">
+        <a href="index.html">
+          <span>Hack4Impact Starter Pack</span>
+        </a>
+      </p>
+      <button class="link-menu">
+        Menu
+      </button>
+      <nav tabindex="0">
+        <ol>
+        </ol>
+      </nav>
+    </nav>
+    <div id="content" tabindex="-1">
+      <h1 class="lab_title">
+        <em>Lab 8</em>
+        Create a Project
+      </h1>
+
+      <h2>Goals</h2>
+      <ul>
+        <li>Learn how to create a <code>Git</code> repository</li>
+        <li>Create the start of your personal website</li>
+        <li>Become comfortable with using <code>Git</code> in the terminal</li>
+      </ul>
+      <h2>Create a Working Directory</h2>
+      <p>We will be using Visual Studio Code's integrated terminal to practice using <code>Git</code>, but
+        everything you do in the VSCode terminal can also be done in your regular command line interface. VSCode has
+        built-in <strong>graphical user interfaces</strong> (<strong>GUIs</strong>) for managing <code>Git</code>, as
+        well as extensions that provide greater functionality, but for the purposes of better understanding
+        <code>Git</code> we will be using the CLI.
+      </p>
+      <video controls class="video">
+        <source src="assets/folder.mp4" type="video/mp4">
+      </video>
+      <ol>
+        <li>Open Visual Studio Code.</li>
+        <li>Click the <strong>Open...</strong> text beneath <strong>Start</strong> or go to <strong>File</strong>
+          &gt <strong>Open Folder...</strong> in the menu bar.
+        </li>
+        <li>Create a new folder called <code>&ltuser&gt.github.io</code> with <em>your</em> GitHub username.
+          This will be important for later~!</li>
+        <li>Click <strong>Open</strong> to open the folder. This is your working directory.</li>
+        <li>If you see a popup asking <i>Do you trust the authors of the files in this folder?</i>, click <strong>Yes, I
+            trust the authors</strong>.</li>
+      </ol>
+      <h2>Create a File</h2>
+      <p>This will be start of your personal website! We'll go over the details of HTML and CSS later, but for now let's
+        create the main HTML file of your website.</p>
+      <video controls class="video">
+        <source src="assets/file.mp4" type="video/mp4">
+      </video>
+
+      <ol>
+        <li>In the open folder, your Workspace, right-click the left-hand side Explorer panel to open the context menu
+          and click
+          <strong>New File...</strong> or click <strong>New File...</strong> on the Welcome page. You can also go to
+          <strong>File</strong> &gt <strong>New File...</strong> in themenu bar.
+        </li>
+        <li>Name your new file <code>README.md</code>, create it, and save it to your open folder. If it's not open,
+        click the file in the Explorer to open it.</li>
+      </ol>
+      <p class="note">This is a markdown file which will let us write formatted text.</p>
+      <h2>Create the Repository</h2>
+
+      <p>So far, all we've done is make a file in a folder on our system. We haven't really used any version control so
+        let's change that. Open the VSCode integrated terminal with <kbd><kbd>Ctrl </kbd> + <kbd>J</kbd></kbd> on
+        Windows or <kbd><kbd>Cmd</kbd> + <kbd>J</kbd></kbd> on macOS. You can also go to <strong>Terminal</strong> &gt
+        <strong>New Terminal</strong> in the menu bar.
+      </p>
+      <p>In the terminal, run the following to create a <code>Git</code> repository:</p>
+      <h3><b>Execute</b></h3>
+      <pre class="command-line git" data-prompt="$"><code class="language-git">git init</code></pre>
+      <h3><b>Output</b></h3>
+      <pre class="command-line git" data-prompt="$" data-filter-output="(out)"><code class="language-git">git init
+(out)Initialized empty Git repository in Users/khoaly/khoa-l.github.io/.git/</code></pre>
+      <p class="note">Based on Labs 6 and 7, what do you think the .git file created when you initialize the repository is?</p>
+
+
+    </div>
+  </main>
+  <script src="js/ui.js" type="text/javascript"></script>
+  <script src="js/prism.js" type="text/javascript"></script>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({startOnLoad: true, theme: "base"});
+  </script>
+</body>
+
+</html>

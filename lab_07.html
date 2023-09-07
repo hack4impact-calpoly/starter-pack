@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+    Lab 7 - Git
+  </title>
+  <meta charset="UTF-8" />
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+  <meta "="" content=" width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="A guided tour through the fundamentals of Git, HTML, & CSS" name=" description" />
+  <meta content="#0000ff" name="theme-color" />
+  <link href="manifest.json" rel="manifest" />
+  <link href="css/reset.css" media="screen" rel="stylesheet" />
+  <link href="css/screen.css" media="screen" rel="stylesheet" />
+  <link href="css/prism.css" rel="stylesheet" />
+</head>
+
+<body data-lab-id="7">
+  <a class="skip-to-content" href="#content" tabindex="1">
+    Skip to content
+  </a>
+  <main class="layout">
+    <nav id="index">
+      <p class="link-home">
+        <a href="index.html">
+          <span>Hack4Impact Starter Pack</span>
+        </a>
+      </p>
+      <button class="link-menu">
+        Menu
+      </button>
+      <nav tabindex="0">
+        <ol>
+        </ol>
+      </nav>
+    </nav>
+    <div id="content" tabindex="-1">
+      <h1 class="lab_title">
+        <em>Lab 7</em>
+        Git
+      </h1>
+
+      <h2>Goals</h2>
+      <ul>
+        <li>Learn about <code>Git</code></li>
+      </ul>
+      <h2>Snapshots, Not Differences</h2>
+      <p>One of the most popular VCSs is <code>Git</code>. <code>Git</code> is a distributed version control system,
+        however it doesn't use delta-based version control like we mentioned in the last lab.</p>
+      <p>Delta-based VCSs think of the information they store as a set of files and the changes made to each file over
+        time.</p>
+      <pre class="mermaid"> flowchart LR
+        v1(version 1)
+        v2(version 2)
+        v3(version 3)
+        v4(version 4)
+        v5(version 5)
+        v1~~~v2~~~v3~~~v4~~~v5
+        fa[file a]
+        ad1(Δ1)
+        ad2(Δ2)
+        fa-->ad1--->ad2
+        fb[file b]
+        bd1(Δ1)
+        bd2(Δ2)
+        fb---->bd1-->bd2
+        fc[file c]
+        cd1(Δ1)
+        cd2(Δ2)
+        cd3(Δ3)
+        fc-->cd1-->cd2--->cd3
+        classDef versions fill:#f6f9ff,stroke:#cfdbf3
+        class v1,v2,v3,v4,v5 versions
+        classDef node font-family:monospace,font-size:14px</pre>
+      <p><code>Git</code> considers the entire set of files as a whole. Everytime you save the state of
+        your project, also called <strong>committing</strong> your project, <code>Git</code> takes a snapshot of all
+        your files. If a file has not been changed, <code>Git</code> will instead store a reference to that file in the
+        previous snapshot.</p>
+      <pre class="mermaid">
+        flowchart TD
+        v1(version 1)
+        v2(version 2)
+        v3(version 3)
+        v4(version 4)
+        v5(version 5)
+        fa[file a]
+        fb[file b]
+        fc[file c]
+        fa1(a1)
+        fb1(b)
+        fc1(c1)
+        fa2(a1)
+        fb2(b)
+        fc2(c2)
+        fa3(a2)
+        fb3(b1)
+        fc3(c2)
+        fa4(a2)
+        fb4(b2)
+        fc4(c3)
+        v1---fa---fb---fc
+        v2---fa1---fb1---fc1
+        v3---fa2---fb2---fc2
+        v4---fa3---fb3---fc3
+        v5---fa4---fb4---fc4
+        classDef ref stroke-dasharray: 5 5
+        class fa2,fa4,fb1,fb2,fc3 ref
+        classDef versions fill:#f6f9ff,stroke:#cfdbf3
+        class v1,v2,v3,v4,v5 versions
+        classDef node font-family:monospace,font-size:14px</pre>
+      <p class="note">What are the advantages and disadvantages of Delta-based version control versus <code>Git</code>'s
+        version control?</p>
+      <h2>A Bit More Git</h2>
+      <p>There are a few more things to keep in mind as you use <code>Git</code>.</p>
+      <ul>
+        <li><code>Git</code> is a distributed VCS, meaning you hold an entire copy of the server's, or the
+          <em>remote</em>, repository on your local system. This means you can use most <code>Git</code> operations
+          offline.
+        </li>
+        <li><code>Git</code> <em>hashes</em> everything before it is saved. Given an input, an algorithm calculates a
+          unique, fixed-length output. If something changes to the input e.g corruption, loss of data, etc. then the
+          hash value will also change. <code>Git</code> uses the SHA-1 hash, which looks like this:<br><br>
+          <pre class="git"><code class="language-git">24b9da6552252987aa493b52f8696cd6d3b00373</code></pre>
+          <code>Git</code> will also reference files by their hash value so you'll see these hashes everywhere in
+          <code>Git</code>.
+        </li>
+      </ul>
+      <h2>The Three States</h2>
+      <p>This is <strong>important</strong>. <code>Git</code> has three main states that your files can be in:
+        <strong>modified</strong>, <strong>staged</strong>, and <strong>committed</strong>.
+      </p>
+      <ul>
+        <li>Modified means that you have changed the file, but have not committed it to your database yet.</li>
+        <li>Staged means that you have marked a modified file in its current version to go into your next commit
+          snapshot.</li>
+        <li>Committed means that the data is safely stored in your local database.</li>
+      </ul>
+      <p><code>Git</code>'s local database is stored in a folder, or directory, on your computer. When you clone your
+        <code>Git</code> project from a server's repository, this directory is what you are copying over.
+      </p>
+      <p>Once cloned to your system, the general <code>Git</code> workflow is:</p>
+      <ul>
+        <li>Modify files in your working directory</li>
+        <li>Stage the files' changes that you want to be part of your next commit. <em>Only</em> those changes will be
+          added to the staging area.</li>
+        <li>Make a commit, which takes the files in the staging area and puts them into your <code>Git</code> directory.
+        </li>
+      </ul>
+      <pre class="mermaid">
+        sequenceDiagram
+        participant wd as working directory
+        participant sa as staging area
+        participant gd as .git directory
+        gd->>wd: check out the project
+        wd->>wd: modify files
+        wd->>sa: stage changes
+        sa->>gd: commit changes</pre>
+      <h2>Enough Talk!</h2>
+      <p>Let's start working with <code>Git</code>! To know a thing is to do it or per the Cal Poly motto: Learn by
+        Doing!</p>
+
+    </div>
+  </main>
+  <script src="js/ui.js" type="text/javascript"></script>
+  <script src="js/prism.js" type="text/javascript"></script>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({startOnLoad: true, theme: "base", sequence: {mirrorActors: false}});
+  </script>
+</body>
+
+</html>

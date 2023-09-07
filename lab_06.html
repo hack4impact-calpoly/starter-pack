@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+    Lab 6 - Version Control
+  </title>
+  <meta charset="UTF-8" />
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+  <meta "="" content=" width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="A guided tour through the fundamentals of Git, HTML, & CSS" name=" description" />
+  <meta content="#0000ff" name="theme-color" />
+  <link href="manifest.json" rel="manifest" />
+  <link href="css/reset.css" media="screen" rel="stylesheet" />
+  <link href="css/screen.css" media="screen" rel="stylesheet" />
+</head>
+
+<body data-lab-id="6">
+  <a class="skip-to-content" href="#content" tabindex="1">
+    Skip to content
+  </a>
+  <main class="layout">
+    <nav id="index">
+      <p class="link-home">
+        <a href="index.html">
+          <span>Hack4Impact Starter Pack</span>
+        </a>
+      </p>
+      <button class="link-menu">
+        Menu
+      </button>
+      <nav tabindex="0">
+        <ol>
+        </ol>
+      </nav>
+    </nav>
+    <div id="content" tabindex="-1">
+      <h1 class="lab_title">
+        <em>Lab 6</em>
+        Version Control
+      </h1>
+
+      <h2>Goals</h2>
+      <ul>
+        <li>Learn about Version Control Systems</li>
+      </ul>
+      <h2>Version Control</h2>
+      <p>A version control system is a way to keep track of the changes to a file or a set of files. You can think
+        of version control like save states in a video game or data backups. Programmers use version control in order to
+        keep track of changes to our source code. This allows us to compare changes to code over time, revert to older
+        versions of code easily, experiment or iterate safely without fear of critical errors, and, when collaborating,
+        know who made what changes.</p>
+      <p class="note">Version control is also known as source control or source code management.</p>
+      <h2>Local Version Control</h2>
+      <p>If you have ever saved a copy of a file before making changes, you've used a local version control
+        system. Keeping track of files this way is simple, but very error prone. Early local VCSs instead kept a
+        database, called a repository, of revisions and differences between files. This type of version
+        control is called <strong>Delta-based</strong> version control.</p>
+      <pre class="mermaid">
+        flowchart LR
+        subgraph local [local computer]
+        direction LR
+        subgraph database [database]
+        direction TB
+        v1[version 1]
+        v2[version 2]
+        v3[version 3]
+        v3---v2---v1
+        end
+        f[file]
+        f---database
+        end
+        classDef node font-family:monospace,font-size:14px
+        classDef clusters font-family:monospace,font-size:14px
+        classDef cluster rx:5px,ry:5px
+      </pre>
+      <p> For example, let's say you have
+        a file with some text.</p>
+      <h3 class="file-heading"><em>file.txt @ (2023-01-01 13:30:25)</em></h3>
+      <pre class="file">I am doing the Starter Pack!
+I like Hack4Impact!</pre>
+      <p>Later, you make some changes to the file.</p>
+      <h3 class="file-heading"><em>file.txt @ (2023-01-02 12:40:36)</em></h3>
+      <pre class="file">I am done with the Starter Pack!
+I love Hack4Impact!</pre>
+      <p>A Delta-based VCS would keep track of what you <del>deleted</del> or <ins>added</ins>.
+        Then, by adding up all the differences, versions of files saved at any point in time could be recreated.</p>
+      <h3 class="file-heading"><em>file.txt</em></h3>
+      <pre class="file"><del>I am doing the Starter Pack!</del>
+<ins>I am done with the Starter Pack!</ins>
+I <del>like</del><ins>love</ins> Hack4Impact!</pre>
+      <p class="note">What are some easy errors that could happen if your local version control system was copying files
+        as backups?</p>
+      <h2>Centralized Version Control</h2>
+      <p>But what good is local version control if you want to collaborate with other developers? Enter, a centralized
+        version control system (CVCS). In a centralized version control system, an online server hosts the
+        <strong>repository</strong>. Individual developers would <em>check out</em> versions of files from the server to
+        their systems.
+      </p>
+      <p>This system was the standard of version control for many years and is still used today, however there are some
+        inherent risks with relying on a single database of your entire project.</p>
+      <pre class="mermaid">
+        flowchart LR
+        subgraph server [server]
+        direction LR
+        subgraph database [database]
+        direction TB
+        v1[version 1]
+        v2[version 2]
+        v3[version 3]
+        v3---v2---v1
+        end
+        end
+        subgraph cpa [computer a]
+        direction LR
+        fa[file]
+        end
+        subgraph cpb [computer b]
+        direction LR
+        fb[file]
+        end
+        server-->cpa
+        server-->cpb
+        classDef node font-family:monospace,font-size:14px
+        classDef clusters font-family:monospace,font-size:14px
+        classDef cluster rx:5px,ry:5px
+      </pre>
+      <p class="note">What is the major risk of using a centralized version control system?</p>
+      <h2>Distributed Version Control</h2>
+      <p>Hence, the distributed version control system (DVCS). In a DVCS, every developer <em>clones</em> the entire
+        repository
+        from the online server. In the case of server death, each clone of the repository is a full backup of the
+        project files and the database containing the differences between past versions.</p>
+      <pre class="mermaid">
+        flowchart LR
+        subgraph cpa [computer a]
+        direction TB
+        subgraph databasea [database]
+        direction TB
+        v1a[version 1]
+        v2a[version 2]
+        v3a[version 3]
+        v3a---v2a
+        v2a---v1a
+        end
+        fa[file]
+        fa---databasea
+        end
+        subgraph server [server]
+        direction TB
+        subgraph database
+        direction TB
+        v1[version 1]
+        v2[version 2]
+        v3[version 3]
+        v3---v2---v1
+        end
+        end
+        subgraph cpb [computer b]
+        direction TB
+        subgraph databaseb [database]
+        direction TB
+        v1b[version 1]
+        v2b[version 2]
+        v3b[version 3]
+        v3b---v2b
+        v2b---v1b
+        end
+        fb[file]
+        fb---databaseb
+        end
+        cpa<-->server
+          cpb<-->server
+            cpa<-->cpb
+              classDef node font-family:monospace,font-size:14px
+              classDef clusters font-family:monospace,font-size:14px
+              classDef cluster rx:5px,ry:5px
+      </pre>
+      <p class="note">Think of some advantages and disadvantages of using a distributed version control system.</p>
+    </div>
+  </main>
+  <script src="js/ui.js" type="text/javascript"></script>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({startOnLoad: true, theme: "base"});
+  </script>
+</body>
+
+</html>

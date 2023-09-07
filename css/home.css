@@ -1,0 +1,96 @@
+body {
+  padding: 10vw 0 0 14vw;
+  color: #333;
+}
+
+h1,
+p {
+  width: 86%;
+}
+
+@media all and (min-width: 1000px) {
+  h1,
+  p {
+    width: 57%;
+    max-width: 750px;
+  }
+}
+
+h1 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 150%;
+}
+
+h1 + p em {
+  font-family: "SF Mono", "SFMono-Regular", "Roboto Mono", Consolas,
+    "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 24px;
+  font-style: normal;
+  line-height: 160%;
+}
+
+@media all and (max-width: 550px) {
+  h1 + p em {
+    font-size: 18px;
+  }
+}
+
+hr {
+  margin: 40px 0;
+  border-top: 1px solid #000;
+}
+
+a {
+  color: blue;
+}
+
+ul {
+  margin-bottom: 30px;
+  list-style-type: none;
+  padding: 0;
+  line-height: 200%;
+}
+
+.start {
+  padding: 12px 30px;
+  border-radius: 3px;
+  color: #fff;
+  font-family: "SF Mono", "SFMono-Regular", "Roboto Mono", Consolas,
+    "Liberation Mono", Menlo, Courier, monospace;
+  text-decoration: none;
+  background: blue;
+}
+
+.footer {
+  padding-top: 100px;
+}
+
+.footer a {
+  color: #333;
+}
+
+@media all and (max-width: 550px) {
+  body {
+    padding-bottom: 60px;
+  }
+
+  .footer {
+    padding-top: 0;
+  }
+
+  .start {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+    border-radius: 0;
+    padding: 0;
+    line-height: 60px;
+    text-align: center;
+  }
+}
