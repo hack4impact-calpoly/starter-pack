@@ -220,7 +220,8 @@ h1 em {
   background: #f9f9f9;
 }
 
-code {
+/* not pseudo class because of conflict with prism styling */
+code:not([class]) {
   border-radius: 3px;
   padding: 1px 3px;
   font-family: "SF Mono", "SFMono-Regular", "Roboto Mono", Consolas,
