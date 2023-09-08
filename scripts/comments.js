@@ -51,7 +51,6 @@ if (comments) {
             div.innerHTML = "\n            <div class=\"comment-user\">".concat(comment.user, "</div>\n            <div class=\"comment-content\">").concat(comment.content, "</div>\n        ");
             comments.appendChild(div);
             // Clear the form
-            user.value = "";
             content.value = "";
         });
     }

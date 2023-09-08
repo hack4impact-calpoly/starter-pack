@@ -78,8 +78,9 @@ if (comments) {
         `;
             comments.appendChild(div);
 
+            // disable user input after submitting a comment
+            user.disabled = true;
             // Clear the form
-            user.value = "";
             content.value = "";
         });
     }
