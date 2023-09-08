@@ -69,14 +69,15 @@
       <p>To save the state of this file, we'll commit it to our <code>Git</code> repository! Every commit also
       requires a message that describes the purpose of the commit, which we can set with the <code>-m</code> parameter.</p>
       <h3><b>Execute</b></h3>
-      <pre class="command-line git" data-prompt="$"><code class="language-git">git commit index.html -m "Initial commit"</code></pre>
+      <pre class="command-line git" data-prompt="$"><code class="language-git">git commit -m "Initial commit"</code></pre>
       <h3><b>Output</b></h3>
-<pre class="command-line git" data-prompt="$" data-filter-output="(out)"><code class="language-git">git commit index.html -m "Initial commit"
-(out)[main (root-commit) f1e44a7] Initial commit
+<pre class="command-line git" data-prompt="$" data-filter-output="(out)"><code class="language-git">git commit -m "feat: add README.md"
+(out)[main (root-commit) f1et44a7] feat: add README.md
 (out) 1 file changed, 0 insertions(+), 0 deletions(-)
 (out) create mode 100644 README.md
 (out)</code></pre>
-      <p class="note">The very first commit to a repository is usually labeled with the message "Initial Commit"</p>
+      <p class="note">We will be using conventional commits. The format is <em>&ltfeat or fix&gt: &ltcommit message under 50 words&gt</em>.
+      Commit messages should be clear and concise in the present tense.</p>
       <h2>Status Check</h2>
       <h3><b>Execute</b></h3>
       <pre class="command-line git" data-prompt="$"><code class="language-git">git status</code></pre>
@@ -88,7 +89,7 @@
       <p>You should see this message which means the state of your working directory matches the latest state committed to the repository!</p>
       <h2>More Files to Track</h2>
       <p>Create the following files, follow the same steps, and track them one at a time. For each file, the commit message should follow
-      the format of <code class="language-git">"feat: add &ltfile-name&gt"</code>.</p>
+      the format of <code class="language-git">"feat: add &ltfile name&gt"</code>.</p>
       <ul>
         <li>styles.css</li>
         <li>blog.html</li>
@@ -98,7 +99,7 @@
         <li>resume.html</li>
       </ul>
       <p>Alternatively, you can make one commit with all the files. In which case, the commit message should be
-      <code class="language-git">"feat: &ltdescribe-commit-under-50-words&gt"</code>.</p>
+      <code class="language-git">"feat: &ltdescribe commit in 50 words&gt"</code>.</p>
       <p class="note"><strong>Hint:</strong> You can stage more than one file before you commit them.</p>
 
     </div>
