@@ -48,14 +48,12 @@ pre[class*="language-"] {
   overflow: auto;
   border-radius: 5px;
   border: 1px solid #eee;
+  margin: 0 0 0.5rem 0;
+}
+
+pre[class*="language-"].file {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-}
-code[class*="language-"].git,
-pre[class*="language-"].git {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  margin: 0 0 0.5rem 0;
 }
 
 :not(pre) > code[class*="language-"],
