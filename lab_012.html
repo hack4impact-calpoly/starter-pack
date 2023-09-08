@@ -46,11 +46,23 @@
         <li>Learn how to stage changes for later commits</li>
       </ul>
       <h2>Add Changes to Staging Area</h2>
-      <p>Use the following command to move the modified files to the staging area!</p>
+      <p>Use the following command to move the modified files to the staging area!
+        Then check the status again.</p>
       <h3><b>Execute</b></h3>
-      <pre><code class="language-git">git add README.md</code></pre>
+      <pre class="command-line" data-prompt="$"><code class="language-git">git add README.md</code></pre>
+      <pre class="command-line" data-prompt="$"><code class="language-git">git status</code></pre>
       <h3><b>Output</b></h3>
-
+      <pre class="command-line" data-prompt="$" data-filter-output="(out)"><code class="language-git">git status
+(out)On branch main
+(out)Changes to be committed:
+(out) (use "git restore --staged <file>..." to unstage)
+(out) modified: README.md
+(out)</code></pre>
+      <p>Similar to tracking a file, you've staged the file to the staging area. <code>Git</code>
+        now knows about your changes, but it's not <em>permanently</em> saved to the Git repository yet. 
+        The next commit will include <em>only</em> the staged changes.</p>
+      <p>If you decide you <em>don't</em> want to commit that change after all, the status command reminds you that
+      the <code class="language-git">git restore</code> command can be used to unstage that change.</p>
 
     </div>
   </main>

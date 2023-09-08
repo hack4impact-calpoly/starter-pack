@@ -43,8 +43,28 @@
 
       <h2>Goals</h2>
       <ul>
-        <li>Learn about <code>Git</code></li>
+        <li>Learn about the benefits of separate staging and committing</li>
       </ul>
+      <h2>Small and Frequent</h2>
+      <p>The separate staging and committing states in <code>Git</code> allows for you to fine-tune your source control.
+        You can make changes to your working directory, staging the changes until you are ready to deal with
+        source control. When you are ready to commit, you can make small and frequent commits that group changes in
+        a logical way.</p>
+      <p>For example, suppose you are working on three files: <code>file-a</code>, <code>file-b</code>, and
+        <code>file-c</code>. You have made your changes and staged the files with <code>git add</code> and are ready to
+        commit them. However, the changes you made in <code>file-c</code> don't relate logically to the changes you made
+        in <code>file-a</code> and <code>file-b</code>.
+      </p>
+      <p>You could do the following:</p>
+      <h3><b>Execute</b></h3>
+      <pre class="command-line" data-prompt="$" data-filter-output="(out)"><code class="language-git">git add file-a
+git add file-b
+git commit -m "feat: change file-a and file-b"</code></pre>
+      <h3><b>Execute</b></h3>
+      <pre class="command-line" data-prompt="$" data-filter-output="(out)"><code class="language-git">git add file-c
+git commit -m "feat: change file-c"</code></pre>
+      <p class="note">A good rule of thumb for when to commit is whenever the feature or task you are working on
+        changes. You can never commit too much!</p>
 
 
     </div>
