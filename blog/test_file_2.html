@@ -3,15 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="../output.css" />
+
     <title>My Personal Website</title>
-    <script src="./scripts/blog.ts"></script>
   </head>
 
   <body>
     <nav class="navbar">
       <div class="container">
-        <h1 class="logo"><a href="index.html">personal website</a></h1>
+        <h1 class="logo">
+          <a href="index.html">personal website</a>
+        </h1>
         <ul class="nav-list">
           <li><a href="../index.html">Home</a></li>
           <li><a href="../blog.html">Blog</a></li>
@@ -23,7 +27,7 @@
     </nav>
 
     <main class="main">
-      <div class="content">
+      <div>
         <h2>Another test file</h2>
         <p>This time, I am testing images.</p>
         <p>
@@ -35,10 +39,31 @@
           />
         </p>
       </div>
+      <div
+        id="comment-container"
+        class="comment-container flex flex-col w-[400px] h-auto"
+      >
+        <!-- example -->
+        <div class="comments"></div>
+        <form id="comment-form" class="comment-form flex flex-row gap-y-3 mt-5">
+          <label for="user"
+            >User:
+            <input id="user" />
+          </label>
+          <label for="content"
+            >Comment:
+            <textarea id="content"></textarea>
+          </label>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </main>
 
     <footer class="footer">
       &copy; 2023 My Personal Website | All Rights Reserved
     </footer>
+
+    <script src="../scripts/blog.js"></script>
+    <script src="../scripts/comments.js"></script>
   </body>
 </html>

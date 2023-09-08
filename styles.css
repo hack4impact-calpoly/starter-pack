@@ -48,10 +48,19 @@ body {
 .blog-list {
     display: flex;
     flex-direction: column;
-    column-gap: 20px;
-    position: relative;
-    left: 30px;
+    gap: 20px;
+
     list-style: none;
+}
+
+.blog-list div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: grey;
 }
 
 .nav-list {

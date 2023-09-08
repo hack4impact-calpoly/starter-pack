@@ -14,7 +14,7 @@
 //         return {
 //             // name: file.slice(0, -3),
 //             name: file,
-//             content: fileData,
+//             description: fileData,
 //         };
 //     });
 
@@ -25,7 +25,7 @@ type BlogPreview = {
     slug: string;
     title: string;
     date: string;
-    content: string;
+    description: string;
 };
 
 const blogPosts: BlogPreview[] = [
@@ -33,13 +33,13 @@ const blogPosts: BlogPreview[] = [
         slug: "test_file",
         title: "Test File",
         date: "2021-01-01",
-        content: "This is the first blog post.",
+        description: "This is the first blog post.",
     },
     {
         slug: "test_file_2",
         title: "Test File 2",
         date: "2021-01-02",
-        content: "This is the second blog post.",
+        description: "This is the second blog post.",
     },
 ];
 
@@ -48,11 +48,11 @@ function displayBlogPreview() {
     // const blogPosts = await getBlogPosts();
     console.log(blogPosts);
     const blogList = document.getElementById("blog-list");
-    blogPosts.forEach(({ slug, title, date, content }) => {
-        // postElement.innerHTML = post.content;
+    blogPosts.forEach(({ slug, title, date, description }) => {
+        // postElement.innerHTML = post.description;
         // const title = postElement.querySelector("h1")?.innerHTML;
         // const date = postElement.querySelector("h2")?.innerHTML || "";
-        // const content = postElement.querySelector("p")?.innerHTML;
+        // const description = postElement.querySelector("p")?.innerHTML;
         const link = document.createElement("a");
         link.href = `blog/${slug}.html`;
         link.innerHTML = "Read More";
@@ -61,12 +61,12 @@ function displayBlogPreview() {
         postPreview.innerHTML = `
             <h2 class="post-title">${title}</h2>
             <h3 class="post-subtitle">${date}</h3>
-            <p class="post-content">${content.slice(0, 20)}...</p>
+            <p class="post-description">${description.slice(0, 20)}...</p>
         `;
         postPreview.appendChild(link);
         if (blogList) {
             blogList.appendChild(postPreview);
-            console.log("appeneded");
+            console.log("appended");
         }
     });
 }
