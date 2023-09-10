@@ -1,4 +1,67 @@
-.comment-container {
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: var(--cg-black);
+    color: var(--cg-white); */
+    background-color: var(--cg-white);
+    color: var(--cg-black);
+    padding: 0px 0px;
+    gap: 1rem;
+}
+#comment-container {
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
+}
+
+.comment {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+
+.comment-user {
+    font-weight: bold;
+}
+
+.comment-content {
+    margin-top: 5px;
+}
+
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#comment-form input,
+#comment-form textarea {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#comment-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#comment-form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* .comment-container {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -14,12 +77,16 @@
     align-items: flex-start;
 }
 
+.comment > .comment-user {
+    font-weight: bold;
+}
+
 .comments {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
+} */
 
 /* same as .container, tailwind has a default class named container */
 .container_nav {

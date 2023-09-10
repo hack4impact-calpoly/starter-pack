@@ -49,8 +49,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-
     list-style: none;
+}
+
+.post-preview {
+    height: 200px;
+    width: 500px;
 }
 
 .blog-list div {
@@ -60,7 +64,7 @@ body {
     padding: 10px 10px;
     margin-bottom: 10px;
     border-radius: 10px;
-    background-color: grey;
+    background-color: rgba(218, 220, 220, 0.5);
 }
 
 .nav-list {

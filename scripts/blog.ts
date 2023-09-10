@@ -61,12 +61,11 @@ function displayBlogPreview() {
         postPreview.innerHTML = `
             <h2 class="post-title">${title}</h2>
             <h3 class="post-subtitle">${date}</h3>
-            <p class="post-description">${description.slice(0, 20)}...</p>
+            <p class="post-description">${description}</p>
         `;
         postPreview.appendChild(link);
         if (blogList) {
             blogList.appendChild(postPreview);
-            console.log("appended");
         }
     });
 }
