@@ -27,15 +27,49 @@ if (comments) {
     );
 
     // Render the comments
-    local_comments.forEach((comment) => {
+    local_comments.forEach((comment, idx) => {
         if (comment.blog_slug == blog_slug) {
             const div = document.createElement("div");
+
             div.className = "comment";
             div.innerHTML = `
             <div class="comment-user">${comment.user}</div>
             <div class="comment-content">${comment.content}</div>
+            <div id="trash-icon" class="hidden">
+                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
+                    <path d="M6 4H18V21H6z" opacity=".3"></path><path d="M11 18H9V7h2V18zM15 18h-2V7h2V18zM4 3H20V5H4z"></path><path d="M17 5L14 2 10 2 7 5z"></path><path d="M17,22H7c-1.1,0-2-0.9-2-2V3h14v17C19,21.1,18.1,22,17,22z M7,5v15h10V5H7z"></path>
+                </svg>
+            </div>
         `;
             comments.appendChild(div);
+            // handle hover
+            const trashIcon = div.querySelector("#trash-icon");
+            div.addEventListener("mouseover", (e) => {
+                div.style.backgroundColor = "lightgrey";
+                // show trash icon
+
+                if (trashIcon) {
+                    trashIcon.classList.remove("hidden");
+                }
+            });
+
+            trashIcon?.addEventListener("click", (e) => {
+                // delete comment
+                local_comments.splice(idx, 1);
+                localStorage.setItem(
+                    "comments",
+                    JSON.stringify(local_comments)
+                );
+                div.remove();
+            });
+
+            div.addEventListener("mouseleave", (e) => {
+                div.style.backgroundColor = "white";
+                // hide trash icon
+                if (trashIcon) {
+                    trashIcon.classList.add("hidden");
+                }
+            });
         }
     });
 
@@ -75,8 +109,40 @@ if (comments) {
             div.innerHTML = `
             <div class="comment-user">${comment.user}</div>
             <div class="comment-content">${comment.content}</div>
+            <div id="trash-icon" class="hidden">
+                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
+                    <path d="M6 4H18V21H6z" opacity=".3"></path><path d="M11 18H9V7h2V18zM15 18h-2V7h2V18zM4 3H20V5H4z"></path><path d="M17 5L14 2 10 2 7 5z"></path><path d="M17,22H7c-1.1,0-2-0.9-2-2V3h14v17C19,21.1,18.1,22,17,22z M7,5v15h10V5H7z"></path>
+                </svg>
+            </div>
         `;
             comments.appendChild(div);
+            const trashIcon = div.querySelector("#trash-icon");
+            div.addEventListener("mouseover", (e) => {
+                div.style.backgroundColor = "lightgrey";
+                // show trash icon
+
+                if (trashIcon) {
+                    trashIcon.classList.remove("hidden");
+                }
+            });
+
+            trashIcon?.addEventListener("click", (e) => {
+                // delete comment
+                local_comments.splice(-1, 1);
+                localStorage.setItem(
+                    "comments",
+                    JSON.stringify(local_comments)
+                );
+                div.remove();
+            });
+
+            div.addEventListener("mouseleave", (e) => {
+                div.style.backgroundColor = "white";
+                // hide trash icon
+                if (trashIcon) {
+                    trashIcon.classList.add("hidden");
+                }
+            });
 
             // disable user input after submitting a comment
             user.disabled = true;

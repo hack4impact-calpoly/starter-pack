@@ -13,12 +13,34 @@ if (comments) {
     // Get comments from local storage
     var local_comments_1 = JSON.parse(localStorage.getItem("comments") || "[]");
     // Render the comments
-    local_comments_1.forEach(function (comment) {
+    local_comments_1.forEach(function (comment, idx) {
         if (comment.blog_slug == blog_slug_1) {
-            var div = document.createElement("div");
-            div.className = "comment";
-            div.innerHTML = "\n            <div class=\"comment-user\">".concat(comment.user, "</div>\n            <div class=\"comment-content\">").concat(comment.content, "</div>\n        ");
-            comments.appendChild(div);
+            var div_1 = document.createElement("div");
+            div_1.className = "comment";
+            div_1.innerHTML = "\n            <div class=\"comment-user\">".concat(comment.user, "</div>\n            <div class=\"comment-content\">").concat(comment.content, "</div>\n            <div id=\"trash-icon\" class=\"hidden\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\"  viewBox=\"0 0 24 24\">\n                    <path d=\"M6 4H18V21H6z\" opacity=\".3\"></path><path d=\"M11 18H9V7h2V18zM15 18h-2V7h2V18zM4 3H20V5H4z\"></path><path d=\"M17 5L14 2 10 2 7 5z\"></path><path d=\"M17,22H7c-1.1,0-2-0.9-2-2V3h14v17C19,21.1,18.1,22,17,22z M7,5v15h10V5H7z\"></path>\n                </svg>\n            </div>\n        ");
+            comments.appendChild(div_1);
+            // handle hover
+            var trashIcon_1 = div_1.querySelector("#trash-icon");
+            div_1.addEventListener("mouseover", function (e) {
+                div_1.style.backgroundColor = "lightgrey";
+                // show trash icon
+                if (trashIcon_1) {
+                    trashIcon_1.classList.remove("hidden");
+                }
+            });
+            trashIcon_1 === null || trashIcon_1 === void 0 ? void 0 : trashIcon_1.addEventListener("click", function (e) {
+                // delete comment
+                local_comments_1.splice(idx, 1);
+                localStorage.setItem("comments", JSON.stringify(local_comments_1));
+                div_1.remove();
+            });
+            div_1.addEventListener("mouseleave", function (e) {
+                div_1.style.backgroundColor = "white";
+                // hide trash icon
+                if (trashIcon_1) {
+                    trashIcon_1.classList.add("hidden");
+                }
+            });
         }
     });
     // allow users to add comments
@@ -48,8 +70,31 @@ if (comments) {
             // Render the comment
             var div = document.createElement("div");
             div.className = "comment";
-            div.innerHTML = "\n            <div class=\"comment-user\">".concat(comment.user, "</div>\n            <div class=\"comment-content\">").concat(comment.content, "</div>\n        ");
+            div.innerHTML = "\n            <div class=\"comment-user\">".concat(comment.user, "</div>\n            <div class=\"comment-content\">").concat(comment.content, "</div>\n            <div id=\"trash-icon\" class=\"hidden\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\"  viewBox=\"0 0 24 24\">\n                    <path d=\"M6 4H18V21H6z\" opacity=\".3\"></path><path d=\"M11 18H9V7h2V18zM15 18h-2V7h2V18zM4 3H20V5H4z\"></path><path d=\"M17 5L14 2 10 2 7 5z\"></path><path d=\"M17,22H7c-1.1,0-2-0.9-2-2V3h14v17C19,21.1,18.1,22,17,22z M7,5v15h10V5H7z\"></path>\n                </svg>\n            </div>\n        ");
             comments.appendChild(div);
+            var trashIcon = div.querySelector("#trash-icon");
+            div.addEventListener("mouseover", function (e) {
+                div.style.backgroundColor = "lightgrey";
+                // show trash icon
+                if (trashIcon) {
+                    trashIcon.classList.remove("hidden");
+                }
+            });
+            trashIcon === null || trashIcon === void 0 ? void 0 : trashIcon.addEventListener("click", function (e) {
+                // delete comment
+                local_comments_1.splice(-1, 1);
+                localStorage.setItem("comments", JSON.stringify(local_comments_1));
+                div.remove();
+            });
+            div.addEventListener("mouseleave", function (e) {
+                div.style.backgroundColor = "white";
+                // hide trash icon
+                if (trashIcon) {
+                    trashIcon.classList.add("hidden");
+                }
+            });
+            // disable user input after submitting a comment
+            user.disabled = true;
             // Clear the form
             content.value = "";
         });
