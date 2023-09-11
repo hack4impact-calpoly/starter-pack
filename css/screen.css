@@ -222,6 +222,7 @@ h1 em {
 
 /* not pseudo class because of conflict with prism styling */
 code:not([class]) {
+  font-size: 14px;
   border-radius: 3px;
   padding: 1px 3px;
   font-family: "SF Mono", "SFMono-Regular", "Roboto Mono", Consolas,
@@ -322,7 +323,8 @@ abbr {
   font-weight: bold;
 }
 
-.video {
+.video,
+.image {
   max-width: 100%;
   height: auto;
   display: block;
