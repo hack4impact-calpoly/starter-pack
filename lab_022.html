@@ -3,7 +3,7 @@
 
 <head>
   <title>
-    Lab  - Git
+    Lab 22 - Lists, Links, and Images
   </title>
   <meta charset="UTF-8" />
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
@@ -16,7 +16,7 @@
   <link href="css/prism.css" rel="stylesheet" />
 </head>
 
-<body data-lab-id="">
+<body data-lab-id="22">
   <a class="skip-to-content" href="#content" tabindex="1">
     Skip to content
   </a>
@@ -37,14 +37,45 @@
     </nav>
     <div id="content" tabindex="-1">
       <h1 class="lab_title">
-        <em>Lab </em>
-        Git
+        <em>Lab 22</em>
+        Links, Lists, and Images
       </h1>
 
       <h2>Goals</h2>
       <ul>
-        <li>Learn about <code>Git</code></li>
+        <li>Learn about lists, links, and images in HTML</li>
+        <li>
+          Add an <code class="language-html">&lt;a&gt;</code> to your personal website
+        </li>
+        <li>
+          Add a <code class="language-html">&lt;ul&gt;</code> to your personal website
+        </li>
+        <li>
+          Add an <code class="language-html">&lt;image&gt;</code> to your personal website
+        </li>
       </ul>
+      <h2>Connect with Links</h2>
+      <p>So far, we have a few individual HTML webpages right now, but many unconnected webpages doth not make a
+        website. Like everything on the Internet, it's time we connect our webpages together with <em>links</em>. That's
+        what the HyperText in HTML is referring to: a system of links.</p>
+      <p>We can make a link with an anchor tag, <code class="language-html">&lt;a&gt;</code>, which will let us
+        determine the link text as well as the destination for the link. The destination is set using a
+        <strong>URL</strong> in the <code>href=""</code> attribute of the anchor tag.
+      </p>
+      <p>Let's add a link to your <code>index.html</code> page that points back to your <code>index.html</code> page.
+        Silly, but necessary. In the <code class="language-html">&lt;h1&gt;</code> heading in your <code
+          class="language-html">&lt;nav&gt;</code> tag, wrap the text in an anchor tag.
+      </p>
+      <p>Then, in your anchor tag's opening tag, add the <code>href="index.html"</code>attribute.</p>
+      <h3 class="file-heading"><em>index.html</em></h3>
+      <pre class="file line-numbers" data-range="1,21" data-src="prism/html/2201.html" data-line="7-11"></pre>
+      <h2>Test Your Connection</h2>
+      <p>Now, go to your page. You will see the logo text colored blue and underlined, much like a hyperlink you
+        would see on other websites. If you experiment with changing your <code>href="index.html"</code> to your other
+        HTML pages, you can click and move to that page.</p>
+      <p>Once you're done experimenting, change it back to <code>href="index.html"</code>!</p>
+
+
 
 
     </div>

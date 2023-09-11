@@ -48,9 +48,10 @@
         <li>Add a <code class="language-html">&lt;footer&gt;</code> to your personal website</li>
       </ul>
       <h2>Main, Article, and Section</h2>
-      <p>Inside of your HTML document, there are a few ways to provide clear meaning to the structure of your content.
-        HTML provides us with the <code class="language-html">&lt;main&gt;</code>, <code
-          class="language-html">&lt;article&gt;</code>, and <code class="language-html">&lt;section&gt;</code> tags.</p>
+      <p>Inside of the <code class="language-html">&lt;body&gt;</code> tag, there are a few ways to provide clear
+        meaning to the structure of your content. HTML provides us with the <code
+          class="language-html">&lt;main&gt;</code>, <code class="language-html">&lt;article&gt;</code>, and <code
+          class="language-html">&lt;section&gt;</code> tags.</p>
       <p>The <code class="language-html">&lt;main&gt;</code> tag is used once to signify the most important content on
         the page. The <code class="language-html">&lt;article&gt;</code> tag can be used once like in a blog or multiple
         times like in a newspaper to signify a blocks of content. And of course, <code
@@ -60,21 +61,23 @@
       <ul>
         <li>Add a <code class="language-html">&lt;main&gt;</code> tag inside the <code
             class="language-html">&lt;body&gt;</code> tag of every page</li>
-        <li>Add 5 <code class="language-html">&lt;section&gt;</code> tasg inside the <code
+        <li>Add 5 <code class="language-html">&lt;section&gt;</code> tags inside the <code
             class="language-html">&lt;main&gt;</code> tag of your <code>resume.html</code></li>
       </ul>
-      <pre class="line-numbers" data-src="prism/html/1801.html"></pre>
+      <h3 class="file-heading"><em>resume.html</em></h3>
+      <pre class="file line-numbers" data-src="prism/html/1801.html"></pre>
       <h2>Header, Nav, and Footer</h2>
-      <p>Inside of the <code class="language-html">&lt;body&gt;</code> tag, content can be split up into a few key
-        areas. There is usually a <code class="language-html">&lt;nav&gt;</code> tag as the first thing inside the body
-        tag.
-        This handles navigation between different pages and where our navbar is usually situated.
+      <p>Aside from your main content, there are a few more key semantic categories. If it exists, the <code
+          class="language-html">&lt;header&gt;</code>
+        tag is usually the first, at the top, inside the <code class="language-html">&lt;body&gt;</code> tag.
+        This is for page banners, introductory content, slogans, etc..
       </p>
-      <p>Next, there is the <code class="language-html">&lt;main&gt;</code> tag. This is where the main content of the
-        <code class="language-html">&lt;body&gt;</code> goes. Finally, there is the <code
-          class="language-html">&lt;footer&gt;</code> which comes after <code class="language-html">&lt;main&gt;</code>.
-        On websites, this is usually where copyright information, privacy notices, etc goes. Add the following tags
-        where they belong!
+      <p>Next, there is the <code class="language-html">&lt;nav&gt;</code> tag. This is where the navigation bar and
+        links to other pages goes. This is comes right before <code class="language-html">&lt;main&gt;</code>.
+        Finally, there is the <code class="language-html">&lt;footer&gt;</code> which comes after <code
+          class="language-html">&lt;main&gt;</code>.
+        On websites, this is usually where copyright information, privacy notices, etc goes.</p>
+      <p>In your <code>index.html</code>, add the following tags where they belong!
       </p>
       <ul>
         <li>The <code class="language-html">&lt;nav&gt;</code> tag at the top inside the <code
@@ -85,16 +88,15 @@
         <li>The <code class="language-html">&lt;footer&gt;</code> tag after the <code
             class="language-html">&lt;main&gt;</code></li>
       </ul>
-      <p class="note"><strong>Note:</strong> Remember, all these tags have an opening and a closing tag. Also, your
-        <code class="language-html">&lt;body&gt;</code> tag should still enclose everything.
-      </p>
       <h2>Section Other Pages</h2>
       <li>
-        Add a <code class="language-html">&lt;nav&gt;</code>,
-        <code class="language-html">&lt;main&gt;</code>, and
+        Add a <code class="language-html">&lt;nav&gt;</code> and
         <code class="language-html">&lt;footer&gt;</code> to each page's
-        <code class="language-html">&lt;body&gt;</code>
+        <code class="language-html">&lt;body&gt;</code> the same way you did for <code>index.html</code>
       </li>
+      <p class="note"><strong>Note:</strong> All these tags have an opening and a closing tag. Also, your
+        <code class="language-html">&lt;body&gt;</code> tag should still enclose everything.
+      </p>
 
 
     </div>
