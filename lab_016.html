@@ -44,11 +44,18 @@
       <h2>Goals</h2>
       <ul>
         <li>Learn what tags, attributes, and elements are</li>
-        <li>Add them to your personal website</li>
+        <li>Add a <code class="language-html">&lt;body&gt;</code> to your personal website</li>
+        <li>Add a <code class="language-html">&lt;head&gt;</code> to your personal website</li>
+        <li>Add a <code class="language-html">&lt;footer&gt;</code> to your personal website</li>
       </ul>
+      <h2>Elements</h2>
+      <p><em>Elements</em> refer to the different types of text that make up a webpage. An HTML element looks something
+        like:</p>
+      <pre><code class="language-html">&lt;tag&gt;text content&lt;/tag&gt;</code></pre>. <p>The text in the middle is
+        the content of the element and the bracketed text on either side of the content are the element's tags.</p>
       <h2>Tags</h2>
-      <p><em>Tags</em> are the building blocks of all HTML documents. They surround content giving meaning and context
-        to that content. Let's add a few to your website. Make sure your document looks like the following:</p>
+      <p><em>Tags</em> are the building blocks of all web applications. They surround content and give it meaning and
+        provide context. Let's add a few to your website. Make sure your document looks like the following:</p>
       <h3 class="file-heading"><em>index.html</em></h3>
       <pre class="file line-numbers" data-src="prism/html/basic-1.html"></pre>
       <p>At the very top of all HTML documents is a <strong>document type declaration</strong>. This tells your web
@@ -70,12 +77,40 @@
       </p>
       <h2>Structure, not Style</h2>
       <p>If you open your browser now and refresh your HTML page, you'll see that nothing has changed. This is because
-        HTML doesn't change the way things <em>appear</em>, but it adds structure and meaning to the content. Right-click the
+        HTML doesn't change the way things <em>appear</em>, but it adds structure and meaning to the content.
+        Right-click the
         site and <strong>Inspect</strong> to see the HTML structure you added.</p>
       <video class="video" controls>
         <source src="assets/tags.mp4" type="">
       </video>
+      <h2>Head and Footer</h2>
+      <p>Let's add some more structure to your website. While the main content of the your page goes inside it's <code
+          class="language-html">&lt;body&gt;</code>, there is also the <code class="language-html">&lt;head&gt;</code>
+        tag which goes before the <code class="language-html">&lt;body&gt;</code>. The <code
+          class="language-html">&lt;head&gt;</code> contains information <em>about</em> the page which is not
+        visible on the page itself.</p>
+      <p>This includes the <code class="language-html">&lt;title&gt;</code> tag which
+        determines the title of your website, obvious we know. It can also include meta information for search engines
+        to categorize your site with and tags that link your HTML to your CSS styling.</p>
+      <p>Finally, the <code class="language-html">&lt;footer&gt;</code> tag comes
+        after the <code class="language-html">&lt;body&gt;</code>. On websites, this is usually where copyright
+        informaiton, privacy notices, etc goes. Add the following tags where they belong!</p>
+      <ul>
+        <li>The <code class="language-html">&lt;head&gt;</code> tag before the <code
+            class="language-html">&lt;body&gt;</code></li>
+        <li>The <code class="language-html">&lt;footer&gt;</code> tag before the <code
+            class="language-html">&lt;body&gt;</code></li>
+      </ul>
+      <p class="note">Remember, all these tags have an opening and a closing tag. Also, your <code
+          class="language-html">&lt;html&gt;</code> tag should still enclose everything.</p>
       <h2>Attributes</h2>
+      <p>Some HTML tags will have what are called <em>attributes</em>. Attributes are extra information you can apply to
+        certain tags. One of the main thing they can be used for is to group different HTML tags together in a way that
+        we can reference when styling our page with CSS.</p>
+
+      <p>Attributes are placed inside the opening tag and their values are placed inside quotation marks. For example:
+      </p>
+      <pre><code class="language-html">&lt;tag attribute="value"&gt;text content&lt;/tag&gt;</code></pre>
 
 
     </div>
