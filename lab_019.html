@@ -3,7 +3,7 @@
 
 <head>
   <title>
-    Lab 19 - Spans and Divs
+    Lab 19 - Paragraphs and Headings
   </title>
   <meta charset="UTF-8" />
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
@@ -38,42 +38,70 @@
     <div id="content" tabindex="-1">
       <h1 class="lab_title">
         <em>Lab 19</em>
-        Spans and Divs
+        Paragraphs and Headings
       </h1>
 
       <h2>Goals</h2>
       <ul>
-        <li>Learn about <code class="language-html">&lt;span&gt;</code> and <code
-            class="language-html">&lt;div&gt;</code></li>
-        <li>Add <code class="language-html">&lt;div&gt;</code>s to your personal website</li>
+        <li>Learn about paragraphs and headings in HTML</li>
+        <li>Add a <code class="language-html">&lt;p&gt;</code> to your personal website</li>
+        <li>Add headings to your personal website</li>
       </ul>
-      <h2>Generics Containers</h2>
-      <p><code class="language-html">&lt;span&gt;</code> and <code class="language-html">&lt;div&gt;</code> are generic
-        containers for content that don't have any semantic meaning to them. Although, we will continue to stress the
-        importance of writing HTML that provides meaning and structure to a page, <em>sometimes</em> we need a
-        catch-all,
-        generic solution for content that is not easily categorizable into one of the existing HTML tags.</p>
-      <p>Often, you will attach a <strong>class attribute</strong> or <strong>id attribute</strong> to the <code
-          class="language-html">&lt;span&gt;</code> or <code class="language-html">&lt;div&gt;</code>. If you remember
-        from Lab 16, this is so we can reference specific attributes in our CSS and select those specific classes or ids
-        for styling.</p>
-      <h2>Add a Div</h2>
-      <p>Let's add a <code class="language-html">&lt;div&gt;</code> to your personal website. In your
-        <code>index.html</code> file, let's wrap all of your paragraphs in a <code
-          class="language-html">&lt;div&gt;</code>. Let's give this <code class="language-html">&lt;div&gt;</code> the
-        class attribute of <code class="language-html">&lt;div class="about"&gt;</code>.
-      </p>
-      <p>It'll look something, but not exactly, like the following:</p>
+      <h2>Paragraph Structuring</h2>
+      <p>In your <code>index.html</code>'s <code class="language-html">&lt;body&gt;</code>, add another line:</p>
       <h3 class="file-heading"><em>index.html</em></h3>
-      <pre class="file line-numbers" data-src="prism/html/1901.html" data-line="10,25"></pre>
-      <p class="note"><strong>Note:</strong> The heading on Line 9 stays outside the <code
-          class="language-html">&lt;div&gt;</code>. Don't forget the class attribute and attribute value on Line 10!</p>
-      <h2>Add More!</h2>
-      <p>Update the other pages of your website with the new things we've learned about.</p>
-      <ul>
-        <li>Add a <code class="language-html">&lt;h1&gt;</code> heading at the top, inside <code
-            class="language-html">&lt;main&gt;</code> on every page</li>
-      </ul>
+      <pre class="file line-numbers" data-line="11" data-src="prism/html/1801.html"></pre>
+      <p>If you go to your webpage in your browser, you'll see that the text you added does not look the same as in your
+        code, on two separate lines.</p>
+      <img class="image" src="assets/1801.png" alt="The text added to the page is not on two separate lines.">
+      <p>This is because web browsers don't usually take into account the way your code looks. Remember, HTML is all
+        about meaning, or <strong>semantics</strong>. This means that if you want there to be two separate blocks of
+        text, you need to explicitly code it.</p>
+      <p>This is where the <code class="language-html">&lt;p&gt;</code> tag comes in. Wrap each line of text in a <code
+          class="language-html">&lt;p&gt;</code> tag.</p>
+      <h3 class="file-heading"><em>index.html</em></h3>
+      <pre class="file line-numbers" data-src="prism/html/1802.html" data-line="10-11"></pre>
+      <p>In the browser, you can now see that the paragraphs are on two separate lines.</p>
+      <img class="image" src="assets/1802.png" alt="The paragraphs added to the page is on two separate lines.">
+      <p> You can also achieve a line-break using the self-closing <code class="language-html">&lt;br&gt;</code>, or
+          line-break tag, inside of a paragraph tag between text: 
+        <pre><code class="language-html">&lt;p&gt;some text&lt;br&gt;other text&lt;/p&gt;</code></pre>
+        <p><em>However</em>, only use this if the ideas in the paragraph are related. Don't use this as a subsitute for using
+        multiple paragraph tags.</p>
+      <h2>Emphasis and Breaks</h2>
+      <p>So far, all we have is plain text, but there are a couple of ways to emphasize and higlight
+        important text. You might have noticed some text that have been emphasized throughout this Starter Pack.</p>
+
+      <p>To do that you can surround text with the <code class="language-html">&lt;em&gt;</code> or the <code
+          class="language-html">&lt;strong&gt;</code> tags. Usually browsers will render the <code
+          class="language-html">&lt;em&gt;</code> as italicized and the <code
+          class="language-html">&lt;strong&gt;</code> tags as bold, but remember that HTML is about semantics or
+        meaning, not appearance. You should use these when you want to <em>emphasize</em> or <strong>strongly
+          emphasize</strong> text, not to make text italicized or bolded.</p>
+      <p>Get rid of the temporary text in your <code>index.html</code>'s <code class="language-html">&lt;main&gt;</code>
+        and instead write an about you! Use paragraphs, emphasis, and strong emphasis where appropriate!
+      </p>
+      <img class="image" src="assets/1803.png" alt="A description or about me about Hack4Impact">
+      <p class="note"><strong>Note:</strong> This is your reminder to commit! If it's been a while, remember you can separate out the staging
+        and committing of different files.</p>
+      <h2>Headings</h2>
+      <p>Continuing with text formatting, we have headings! They're exactly what they sound like. There are 6 different
+        headings with specific emphasis and styles. <code class="language-html">&lt;h1&gt;</code>, <code
+          class="language-html">&lt;h2&gt;</code>, <code class="language-html">&lt;h3&gt;</code>, <code
+          class="language-html">&lt;h4&gt;</code>, <code class="language-html">&lt;h5&gt;</code>, and <code
+          class="language-html">&lt;h6&gt;</code>.</p>
+      <p>At the top of your <code class="language-html">&lt;main&gt;</code>, before your <code
+          class="language-html">&lt;p&gt;</code> paragraphs, put an <code class="language-html">&lt;h1&gt;</code> tag.
+        Inside, give your home page an appropriate heading. We'll put "hello world!"</p>
+      <img class="image" src="assets/1804.png" alt="A description or about me about Hack4Impact">
+      <p>The <code class="language-html">&lt;h1&gt;</code> headings is only be used once as the main heading of a page.
+        The other headings can be used as many times as necessary, but always in order. <code
+          class="language-html">&lt;h3&gt;</code> should be a sub-heading of <code
+          class="language-html">&lt;h2&gt;</code> and <code class="language-html">&lt;h6&gt;</code> should be the
+        sub-heading of <code class="language-html">&lt;h5&gt;</code> and so on.</p>
+      <h3 class="file-heading"><em>headings</em></h3>
+      <pre class="file"><h1 class="nostyle">heading 1</h1><h2 class="nostyle">heading 2</h2><h3 class="nostyle">heading 3</h3><h4 class="nostyle">heading 4</h4><h5 class="nostyle">heading 5</h5><h6 class="nostyle">heading 6</h6></pre>
+
 
     </div>
   </main>

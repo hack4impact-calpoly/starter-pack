@@ -3,7 +3,7 @@
 
 <head>
   <title>
-    Lab 20 - Spans and Divs
+    Lab 19 - Spans and Divs
   </title>
   <meta charset="UTF-8" />
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
@@ -16,7 +16,7 @@
   <link href="css/prism.css" rel="stylesheet" />
 </head>
 
-<body data-lab-id="20">
+<body data-lab-id="19">
   <a class="skip-to-content" href="#content" tabindex="1">
     Skip to content
   </a>
@@ -37,7 +37,7 @@
     </nav>
     <div id="content" tabindex="-1">
       <h1 class="lab_title">
-        <em>Lab 20</em>
+        <em>Lab 19</em>
         Spans and Divs
       </h1>
 
@@ -62,29 +62,19 @@
         <strong>in-line</strong> while <code class="language-html">&lt;div&gt;</code>s are for blocks of content.
       </p>
       <h2>Add a Div</h2>
-      <p>Since we already have text about us on our <code>index.html</code>, we'll make it an about page. Later we can
-        add a profile image to this page. Let's group the image and the text in our about page together to distinguish
-        it from the heading and other content. No other tag <em>really</em> fits the semantic we want, so we will use a
-        <code class="language-html">&lt;div&gt;</code>.
-      </p>
-
       <p>Let's add a <code class="language-html">&lt;div&gt;</code> to your personal website. In your
         <code>index.html</code> file, let's wrap all of your paragraphs in a <code
           class="language-html">&lt;div&gt;</code>. Let's give this <code class="language-html">&lt;div&gt;</code> the
-        class attribute of <code class="language-html">&lt;div class="about-text"&gt;</code>.
+        class attribute of <code class="language-html">&lt;div class="about"&gt;</code>.
       </p>
-      <p>Let's also add a blank <code class="language-html">&lt;div&gt;</code> with the class attribute <code
-          class="language-html">class="about-image"</code> as a placeholder for our future image above your text <code
-          class="language-html">&lt;div&gt;</code>.</p>
-      <p>Finally, let's wrap both the image <code class="language-html">&lt;div&gt;</code> and the text <code
-          class="language-html">&lt;div&gt;</code> in a <code class="language-html">&lt;div class="about"&gt;</code>!
-      </p>
+      <p>Later we'll add an image to the about section and we want to group the image together with the text as well as
+        distinguish it from the heading and other content. No other tag <em>really</em> fits the semantic we want, so we
+        will use a <code class="language-html">&lt;div&gt;</code>.</p>
       <p>It'll look something like the following:</p>
       <h3 class="file-heading"><em>index.html</em></h3>
-      <pre class="file line-numbers" data-src="prism/html/1901.html" data-line="10-12,27-28"></pre>
+      <pre class="file line-numbers" data-src="prism/html/1901.html" data-line="10,25"></pre>
       <p class="note"><strong>Note:</strong> The heading on Line 9 stays outside the <code
-          class="language-html">&lt;div&gt;</code>. Don't forget the class attribute and attribute value for each one!
-      </p>
+          class="language-html">&lt;div&gt;</code>. Don't forget the class attribute and attribute value on Line 10!</p>
       <h2>Add More!</h2>
       <p>Update the other pages of your website with the new things we've learned about.</p>
       <ul>
@@ -104,6 +94,9 @@
           <code class="language-html">&lt;main&gt;</code> under your heading. Give it the <code>class="project"</code>
           attribute.
         </li>
+        <li>in your <code>index.html</code> page, make two more <code class="language-html">&lt;div&gt;</code>s inside
+          your <code class="language-html">&lt;div class="about"&gt;</code> under your heading. The first <code
+            class="language-html">&lt;div&gt;</code>, give it the class <code>class="about image"</code>
       </ul>
 
     </div>
