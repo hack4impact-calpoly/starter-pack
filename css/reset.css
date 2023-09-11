@@ -1,4 +1,4 @@
-html {
+html:not(.nostyle) {
   box-sizing: border-box;
 }
 *,
@@ -19,7 +19,7 @@ body {
     "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-h1 {
+h1:not(.nostyle) {
   margin: 0.67em 0;
 }
 
