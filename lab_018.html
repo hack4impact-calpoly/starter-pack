@@ -3,8 +3,7 @@
 
 <head>
   <title>
-    Lab 18 - Page Titles
-  </title>
+    Lab 18 - Section </title>
   <meta charset="UTF-8" />
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
   <meta "="" content=" width=device-width, initial-scale=1.0" name="viewport" />
@@ -38,44 +37,64 @@
     <div id="content" tabindex="-1">
       <h1 class="lab_title">
         <em>Lab 18</em>
-        Page Titles
+        Sections
       </h1>
 
       <h2>Goals</h2>
       <ul>
-        <li>Add a <code class="language-html">&lt;title&gt;</code> to your personal website</li>
-        <li>Update all your other pages to be similar to include the tags we've learned about</li>
+        <li>Learn about the different sections in HTML</li>
+        <li>Add a <code class="language-html">&lt;nav&gt;</code> to your personal website</li>
+        <li>Add a <code class="language-html">&lt;main&gt;</code> to your personal website</li>
+        <li>Add a <code class="language-html">&lt;footer&gt;</code> to your personal website</li>
       </ul>
-      <h2>Your Website Title</h2>
-      <p>If you look at your website in your browser, you might notice that your tab just says <code>index.html</code>
-        or the file path. That doesn't look very nice so let's change that.</p>
-      <img class="image" src="assets/0401.png" alt="Image showing a webpage without the title tag">
-      <p>In your <code class="language-html">&lt;head&gt;</code>, add a <code
-          class="language-html">&lt;title&gt;</code>. Then, between the opening and closing tags of the <code
-          class="language-html">&lt;title&gt;</code>, give your website a title. It can be anything!</p>
-      <p>Now when you refresh your webpage, you should see that your website's tab has a title. If you save your webpage
-        as a bookmark, this will also be the name of your bookmark! The page below has the title "Personal Website".</p>
-      <img class="image" src="assets/0402.png" alt="Image showing a webpage with the title tag">
-      <h2>Update Pages</h2>
-      <p>Let's set up your other HTML documents, just like you did for <code>index.html</code>. For each of the other
-        HTML documents, add the following:</p>
+      <h2>Main, Article, and Section</h2>
+      <p>Inside of your HTML document, there are a few ways to provide clear meaning to the structure of your content.
+        HTML provides us with the <code class="language-html">&lt;main&gt;</code>, <code
+          class="language-html">&lt;article&gt;</code>, and <code class="language-html">&lt;section&gt;</code> tags.</p>
+      <p>The <code class="language-html">&lt;main&gt;</code> tag is used once to signify the most important content on
+        the page. The <code class="language-html">&lt;article&gt;</code> tag can be used once like in a blog or multiple
+        times like in a newspaper to signify a blocks of content. And of course, <code
+          class="language-html">&lt;section&gt;</code> is a more general divisor which can break up <code
+          class="language-html">&lt;article&gt;</code> or represent chapters.</p>
+      <p>Let's add a few sections to different HTML pages:</p>
       <ul>
-        <li>A <strong>document type declaration</strong> to the type of each file</li>
-        <li>Add an <code class="language-html">&lt;html&gt;</code> tag to each page</li>
-        <li>Add a <code class="language-html">&lt;head&gt;</code> tag to each page</li>
-        <li>Add a <code class="language-html">&lt;title&gt;</code> in the <code
-            class="language-html">&lt;head&gt;</code> of each page</li>
-        <li>Add a <code class="language-html">&lt;body&gt;</code> to each page</li>
-        <li>Add a <code class="language-html">&lt;nav&gt;</code>, <code class="language-html">&lt;main&gt;</code>, and
-          <code class="language-html">&lt;footer&gt;</code> to each page's <code
-            class="language-html">&lt;body&gt;</code>
-        </li>
-        <li>(Optional) Add some text, use <code class="language-html">&lt;p&gt;</code>, to each <code
-            class="language-html">&lt;main&gt;</code> on each page. We'll be changing this later.</li>
+        <li>Add a <code class="language-html">&lt;main&gt;</code> tag inside the <code
+            class="language-html">&lt;body&gt;</code> tag of every page</li>
+        <li>Add 5 <code class="language-html">&lt;section&gt;</code> tasg inside the <code
+            class="language-html">&lt;main&gt;</code> tag of your <code>resume.html</code></li>
       </ul>
-      <p class="note"><strong>Note:</strong> If you need help, refer to the previous labs or ask on GitHub Discussions!
-        Remember to stage and
-        commit your changes often along the way! </p>
+      <pre class="line-numbers" data-src="prism/html/1801.html"></pre>
+      <h2>Header, Nav, and Footer</h2>
+      <p>Inside of the <code class="language-html">&lt;body&gt;</code> tag, content can be split up into a few key
+        areas. There is usually a <code class="language-html">&lt;nav&gt;</code> tag as the first thing inside the body
+        tag.
+        This handles navigation between different pages and where our navbar is usually situated.
+      </p>
+      <p>Next, there is the <code class="language-html">&lt;main&gt;</code> tag. This is where the main content of the
+        <code class="language-html">&lt;body&gt;</code> goes. Finally, there is the <code
+          class="language-html">&lt;footer&gt;</code> which comes after <code class="language-html">&lt;main&gt;</code>.
+        On websites, this is usually where copyright information, privacy notices, etc goes. Add the following tags
+        where they belong!
+      </p>
+      <ul>
+        <li>The <code class="language-html">&lt;nav&gt;</code> tag at the top inside the <code
+            class="language-html">&lt;body&gt;</code> tag</li>
+        <li>The <code class="language-html">&lt;main&gt;</code> tag after the <code
+            class="language-html">&lt;nav&gt;</code> tag</li>
+        <li>Remember to move your text inside your <code class="language-html">&lt;main&gt;</code> tag!</li>
+        <li>The <code class="language-html">&lt;footer&gt;</code> tag after the <code
+            class="language-html">&lt;main&gt;</code></li>
+      </ul>
+      <p class="note"><strong>Note:</strong> Remember, all these tags have an opening and a closing tag. Also, your
+        <code class="language-html">&lt;body&gt;</code> tag should still enclose everything.
+      </p>
+      <h2>Section Other Pages</h2>
+      <li>
+        Add a <code class="language-html">&lt;nav&gt;</code>,
+        <code class="language-html">&lt;main&gt;</code>, and
+        <code class="language-html">&lt;footer&gt;</code> to each page's
+        <code class="language-html">&lt;body&gt;</code>
+      </li>
 
 
     </div>
@@ -88,4 +107,4 @@
   </script>
 </body>
 
-</html>
+</html

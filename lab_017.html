@@ -1,10 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>
-    Lab 17 - Sections 
-  </title>
+  <title>Lab 17 - Page Titles</title>
   <meta charset="UTF-8" />
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
   <meta "="" content=" width=device-width, initial-scale=1.0" name="viewport" />
@@ -27,35 +25,106 @@
           <span>Hack4Impact Starter Pack</span>
         </a>
       </p>
-      <button class="link-menu">
-        Menu
-      </button>
+      <button class="link-menu">Menu</button>
       <nav tabindex="0">
-        <ol>
-        </ol>
+        <ol></ol>
       </nav>
     </nav>
     <div id="content" tabindex="-1">
       <h1 class="lab_title">
         <em>Lab 17</em>
-        Sections
+        Page Titles
       </h1>
 
       <h2>Goals</h2>
       <ul>
-        <li>Learn about <code>Git</code></li>
+        <li>
+          Add a <code class="language-html">&lt;head&gt;</code> to your personal website
+        </li>
+        <li>
+          Add a <code class="language-html">&lt;title&gt;</code> to your personal website
+        </li>
+        <li>
+          Update all your other pages to include the tags we've learned about
+        </li>
       </ul>
+      <h2>Head</h2>
+      <p>Let's add some more structure to your website. While the main content of the your page goes inside it's <code
+          class="language-html">&lt;body&gt;</code>, there is also the <code class="language-html">&lt;head&gt;</code>
+        tag which goes before the <code class="language-html">&lt;body&gt;</code>. The <code
+          class="language-html">&lt;head&gt;</code> contains information <em>about</em> the page which is not
+        visible on the page itself.</p>
+      <p>This includes the <code class="language-html">&lt;title&gt;</code> tag which
+        determines the title of your website, obvious we know. It can also include meta information for search engines
+        to categorize your site with and tags that link your HTML to your CSS styling. For now, add the <code
+          class="language-html">&lt;head&gt;</code> tag before the <code class="language-html">&lt;body&gt;</code>.</p>
+      <p class="note"><strong>Note:</strong> This is above your <code class="language-html">&lt;body&gt;</code> tag, but
+        inside your <code class="language-html">&lt;html&gt;</code> tag.</p>
 
-
+      <h2>Website Title</h2>
+      <p>
+        If you look at your website in your browser, you might notice that
+        your tab just says <code>index.html</code> or the file path. That
+        doesn't look very nice so let's change that.
+      </p>
+      <img class="image" src="assets/1701.png" alt="Image showing a webpage without the title tag" />
+      <p>
+        In your <code class="language-html">&lt;head&gt;</code>, add a
+        <code class="language-html">&lt;title&gt;</code>. Then, between the
+        opening and closing tags of the
+        <code class="language-html">&lt;title&gt;</code>, give your website a
+        title. It can be anything!
+      </p>
+      <p>
+        Now when you refresh your webpage, you should see that your website's
+        tab has a title. If you save your webpage as a bookmark, this will
+        also be the name of your bookmark! The page below has the title
+        "Personal Website".
+      </p>
+      <img class="image" src="assets/1702.png" alt="Image showing a webpage with the title tag" />
+      <h2>Update Pages</h2>
+      <p>
+        Let's set up your other HTML documents, just like you did for
+        <code>index.html</code>. For each of the other HTML documents, add the
+        following:
+      </p>
+      <ul>
+        <li>
+          A <strong>document type declaration</strong> to the top of each
+          file
+        </li>
+        <li>
+          Add an <code class="language-html">&lt;html&gt;</code> tag to each
+          page
+        </li>
+        <li>
+          Add a <code class="language-html">&lt;head&gt;</code> tag to each
+          page
+        </li>
+        <li>
+          Add a <code class="language-html">&lt;title&gt;</code> in the
+          <code class="language-html">&lt;head&gt;</code> of each page
+        </li>
+        <li>
+          Add text to each <code class="language-html">&lt;title&gt;</code>
+        </li>
+        <li>
+          Add a <code class="language-html">&lt;body&gt;</code> to each page
+        </li>
+      </ul>
+      <p class="note">
+        <strong>Note:</strong> If you need help, refer to the previous labs or
+        ask on GitHub Discussions! Remember to stage and commit your changes
+        often along the way!
+      </p>
     </div>
   </main>
   <script src="js/ui.js" type="text/javascript"></script>
   <script src="js/prism.js" type="text/javascript"></script>
   <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
     mermaid.initialize({startOnLoad: true, theme: "base"});
   </script>
 </body>
 
 </html>
-
