@@ -94,6 +94,7 @@ const labs = [
   "Committing Changes",
   "HyperText Markup Language",
   "Tags, Attributes, and Elements",
+  "Sections",
   "Page Titles",
   "Paragraphs and Headings",
   "Spans and Divs",
