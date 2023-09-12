@@ -176,7 +176,7 @@
   margin-bottom: 0.5rem;
 }
 
-h1:not(.nostyle) {
+h1 {
   border-bottom: 1px solid #ccc;
   padding-bottom: 1rem;
   font-size: 2rem;
@@ -242,7 +242,7 @@ code:not([class]) {
   background-position: 0 1rem;
 }
 
-h2:not(.nostyle) {
+h2 {
   padding-top: 1rem;
   color: blue;
   font-size: 1.75rem;
@@ -254,7 +254,7 @@ h2 + ul {
   list-style-type: circle;
 }
 
-h3:not(.nostyle) {
+h3 {
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
@@ -369,8 +369,9 @@ text.actor,
   font-size: 14px !important;
 }
 
-.nostyle {
-  font-family: serif;
+.iframe {
+  width: 100%;
+  height: 40%;
 }
 
 /* Footer
@@ -459,16 +460,16 @@ text.actor,
     padding-top: 4rem;
   }
 
-  h1:not(.nostyle) {
+  h1 {
     font-size: 2.75rem;
   }
 
-  h2:not(.nostyle) {
+  h2 {
     position: relative;
     font-size: 2.25rem;
   }
 
-  h2:not(.nostyle):before {
+  h2:before {
     position: absolute;
     left: -3.5rem;
     display: inline-block;

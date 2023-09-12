@@ -102,8 +102,6 @@ const labs = [
   "Links, Lists, and Images",
   "Tables and Forms",
   "Semantic HTML",
-  "Accessible Links",
-  "Accesisble Forms",
   "Embedded Content",
   "Applying CSS",
   "Selectors, Properties, and Values",
