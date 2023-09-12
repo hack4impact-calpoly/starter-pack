@@ -73,19 +73,59 @@
       <p>Now, go to your page. You will see the logo text colored blue and underlined, much like a hyperlink you
         would see on other websites. If you experiment with changing your <code>href="index.html"</code> to your other
         HTML pages, you can click and move to that page.</p>
-      <p>Once you're done experimenting, change it back to <code>href="index.html"</code>!</p>
+      <p>Once you're done experimenting, change it back to <code>href="index.html"</code>! Make sure to add the same
+        link to the logo text on every other page as well. They should all link to <code>index.html</code>.</p>
       <img class="image" src="assets/2201.png"
         alt="Website index.html with logo text that is blue and underlined, a link">
       <h2>Lists</h2>
       <p>There are two types of lists we will focus on. Ordered lists and unordered lists. Both lists hold list
-        items,but ordered lists precede each item with a incrementing numbers while unordered lists usually use bullet
+        items, but ordered lists precede each item with a incrementing numbers while unordered lists usually use bullet
         points.</p>
       <p>Both lists have the same structure with <code class="language-html">&lt;ol&gt;</code> tags representing an
-        ordered list and <code class="language-html">&lt;ul&gt;</code> tags representing and unordered list.</p>
-      <h3 class="file-heading"><em>lists</em></h3>
-      <pre class="file line-numbers" data-range="10,27" data-src="prism/html/2202.html"></pre>
-      <h3 class="file-heading"><em>lists</em></h3>
-     <iframe class="iframe file" src="prism/html/2202.html"></iframe> 
+        ordered list and <code class="language-html">&lt;ul&gt;</code> tags representing and unordered list. Inside each
+        of the list tags are list item tags, <code class="language-html">&lt;li&gt;</code>, surrounding content.</p>
+      <h3 class="file-heading"><em>lists.html</em></h3>
+      <div class="side-by-side-container">
+        <div class="side-by-side-child">
+          <pre class="file line-numbers" data-range="7,24" data-src="prism/html/2202.html"></pre>
+        </div>
+        <div class="side-by-side-child">
+          <iframe class="iframe-full file" src="prism/html/2202.html"></iframe>
+        </div>
+      </div>
+      <h2>Navigation</h2>
+      <p>Now that we understand lists and links, let's work on connecting our pages together with navigation. A navbar
+        is just a list of links. So let's do just that and make an unordered list of links inside the
+        <code class="language-html">&lt;nav&gt;</code> and below the <code class="language-html">&lt;h1&gt;</code>
+        heading of your <code>index.html</code>.
+      </p>
+      <p>Each list item should link to the other HTML pages and the text between the list item tags should be the names
+        of those pages. Also add a "Home" linked list item that links back to <code>index.html</code>. For example:</p>
+      <h3 class="file-heading"><em>index.html</em></h3>
+      <pre class="file line-numbers" data-range="11,20" data-src="prism/html/2203.html"></pre>
+      <p>Do the same for every other HTML page. Once done, you should be able to use the links on the page to navigate
+        between your different HTML webpages. You have a basic website!</p>
+      <video class="video" controls>
+        <source src="assets/2201.mp4" type="video/mp4">
+      </video>
+      <h2>Images</h2>
+      <p>All this text we have doesn't really showcase the multimedia nature of the internet. Let's add an image to our
+        <code>index.html</code> so that the world can percieve us! In your <code>index.html</code>, add the following in
+        your <code class="language-html">&lt;div class="about-image"&gt;</code> tag.
+      </p>
+      <pre><code class="language-html">&lt;img src="&lt;path/to/image&gt;" alt="&lt;description of image&gt;"&gt;</code>
+      </pre>
+      <p>Make sure to put an image in the same directory as all your HTML and other files! We have an image
+        <code>sky.jpg</code>
+        which we will add to our page.
+      </p>
+      <pre><code class="language-html">&lt;img src="sky.jpg" alt="A video of an image of the sky and clouds being too big"&gt;</code></pre>
+      <video class="video" controls>
+        <source src="assets/2202.mp4" type="video/mp4">
+      </video>
+      <p>The image is <em>way</em> too big. For now let's put a width and height on our image using the
+        <code>width</code> and <code>height</code> attributes to keep the image smaller.
+      </p>
 
 
 
