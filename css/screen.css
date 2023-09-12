@@ -384,11 +384,12 @@ text.actor,
   display: flex;
 }
 
-.side-by-side-child {
-  flex: 1;
+.side-by-side-child:first-child {
+  flex-grow: 1;
 }
 
 .side-by-side-child:last-child {
+  flex-basis: 1;
   margin: 0 0 0.5rem 0;
 }
 
