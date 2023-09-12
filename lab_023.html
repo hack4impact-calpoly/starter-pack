@@ -3,7 +3,7 @@
 
 <head>
   <title>
-    Lab  - Git
+    Lab 23 - Tables and Forms
   </title>
   <meta charset="UTF-8" />
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
@@ -16,7 +16,7 @@
   <link href="css/prism.css" rel="stylesheet" />
 </head>
 
-<body data-lab-id="">
+<body data-lab-id="23">
   <a class="skip-to-content" href="#content" tabindex="1">
     Skip to content
   </a>
@@ -37,14 +37,61 @@
     </nav>
     <div id="content" tabindex="-1">
       <h1 class="lab_title">
-        <em>Lab </em>
-        Git
+        <em>Lab 23</em>
+        Tables and Forms
       </h1>
 
       <h2>Goals</h2>
       <ul>
-        <li>Learn about <code>Git</code></li>
+        <li>Learn about tables and forms in HTML</li>
+        <li>
+          Add an <code class="language-html">&lt;form&gt;</code> to your personal website
+        </li>
       </ul>
+      <h2>Tables</h2>
+      <p>In the early days of the Internet, tables were
+        used to layout the pages, but now that we can use CSS, tables are mainly for displaying tabular data.
+        Imagine an Excel or Google Sheets table and the kind of information you would display there.
+        Tables have a <strong>table</strong> definition, <strong>table row</strong>, and <strong>table data</strong>
+        cells. Respectively, these are <code class="language-html">&lt;table&gt;</code>, <code
+          class="language-html">&lt;tr&gt;</code>, and <code class="language-html">&lt;td&gt;</code>.</p>
+      <p>The following is the structure for a 3 x 4 table. It defines the table, gives it 4 table rows each of which
+        have 3 table data cells.</p>
+      <h3 class="file-heading"><em>table.html</em></h3>
+      <div class="side-by-side-container">
+        <div class="side-by-side-child">
+          <pre class="file line-numbers" data-range="7,33" data-src="prism/html/2301.html"></pre>
+        </div>
+        <div class="side-by-side-child">
+          <iframe class="iframe-full file" src="prism/html/2301.html"></iframe>
+        </div>
+      </div>
+      <p>As you can see, the HTML definition of the table only positions the elements in place and doesn't provide any
+        styling, borders or colors, that you would expect table in a traditional spreadsheet program. Worry not,
+        when we learn about styling we'll learn how to add those features to our tables.</p>
+      <h2>Forms</h2>
+      <p>The final HTML tag we will cover is <em>forms</em>. Forms are important all across the internet because we want
+        users to be able to interact with our website and not just look at it! Coding a form in just HTML won't be much
+        use to us though.</p>
+      <p>Now that you have more experience in HTML, take a look at the following code examples for forms and see if you
+        can understand what each tag and attribute is doing. Try typing into the fields.</p>
+      <p class="note"><strong>Note:</strong> The <code>id</code> attribute is like <code>class</code> except it can only
+        be applied to one tag on each page. Usually used for unique items per page.</p>
+      <h3 class="file-heading"><em>form.html</em></h3>
+      <div class="side-by-side-container">
+        <div class="side-by-side-child">
+          <pre class="file line-numbers" data-range="8,39" data-src="prism/html/2302.html"></pre>
+        </div>
+        <div class="side-by-side-child">
+          <iframe class="iframe-full file" src="prism/html/2302.html"></iframe>
+        </div>
+      </div>
+      <p class="note"><strong>Note:</strong> Other <code>type</code> of <code class="language-html">&lt;input&gt;</code>
+        include <code>"radio"</code> and <code>"checkbox"</code>. What do you think those inputs look like?</p>
+      <p>If you remember back to Lab 15 and throughout the HTML labs, HTML only provides the <strong>semantics</strong>
+        or meaning of a webpage and not its appearance <em>or</em> its function. This separation of powers helps to keep your code nice
+        and neat, but it also means that our forms won't function without the programming run it.</p>
+
 
 
     </div>
