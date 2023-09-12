@@ -18,7 +18,9 @@ var blogPosts = [
 // show blog posts in blog.html, manipulate the DOM
 function displayBlogPreview() {
     // const blogPosts = await getBlogPosts();
-    console.log(blogPosts);
+    blogPosts.sort(function (a, b) {
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+    });
     var blogList = document.getElementById("blog-list");
     blogPosts.forEach(function (_a) {
         var slug = _a.slug, title = _a.title, date = _a.date, description = _a.description;

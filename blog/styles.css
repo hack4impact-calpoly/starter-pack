@@ -26,6 +26,13 @@
     background-color: #fff;
 }
 
+#comment-container > h1 {
+    font:
+        600 1.5rem "Roboto",
+        sans-serif;
+    padding-bottom: 20px;
+}
+
 .comment {
     position: relative;
     margin-bottom: 20px;
