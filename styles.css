@@ -30,9 +30,7 @@ body {
   width: 100%;
   height: 7%;
   z-index: 10;
-}
 
-.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +79,8 @@ body {
   text-decoration: None;
 }
 
-.main {
+main {
   padding: 0 20px 40px 20px;
-}
-
-.content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -161,6 +156,7 @@ body {
 }
 
 .project-name {
+  font-weight: bold;
   font-size: 20px;
 }
 
