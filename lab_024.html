@@ -3,7 +3,7 @@
 
 <head>
   <title>
-    Lab  - Git
+    Lab 24 - Even More HTML
   </title>
   <meta charset="UTF-8" />
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
@@ -16,7 +16,7 @@
   <link href="css/prism.css" rel="stylesheet" />
 </head>
 
-<body data-lab-id="">
+<body data-lab-id="24">
   <a class="skip-to-content" href="#content" tabindex="1">
     Skip to content
   </a>
@@ -37,15 +37,114 @@
     </nav>
     <div id="content" tabindex="-1">
       <h1 class="lab_title">
-        <em>Lab </em>
-        Git
+        <em>Lab 24</em>
+        Even More HTML
       </h1>
 
       <h2>Goals</h2>
       <ul>
-        <li>Learn about <code>Git</code></li>
+        <li>Update your HTML to include <em>even more</em> new structural and semantic tags</li>
+        <li>Stage and commit all your changes and updates as you work</li>
       </ul>
-
+      <h2>Contact</h2>
+      <p>Let's use our new knowledge about forms to add a way for visitors to our website to contact us.
+        For now it won't do much, but once we tie in JavaScript we can get it to send us a message! Add
+        the following beneath the <code class="language-html">&lt;h1&gt;</code> heading in our
+        <code>contact.html</code>.
+      </p>
+      <ul>
+        <li>In your <code>contact.html</code>, add a <code class="language-html">&lt;form&gt;</code> to the
+          <code class="language-html">&lt;main&gt;</code>. Give it the <code>id="contact-form"</code> attribute.
+        </li>
+        <li>In your <code>contact.html</code>, add an <code class="language-html">&lt;input type="text"&gt;</code> for
+          <strong>Name</strong> and <strong>Email</strong>.
+        </li>
+        <li>In your <code>contact.html</code>, add a <code class="language-html">&lt;textarea&gt;</code> for
+          <strong>Message</strong>
+        </li>
+        <li>In your <code>contact.html</code>, add a <code class="language-html">&lt;input type="submit"&gt;</code> for
+          the <strong>Submit</strong> button
+        </li>
+        <p class="note"><strong>Note:</strong> Remember to have all the appropriate attribute fields and values for each
+          tag. Make sure they are all <code>required</code> too.</p>
+      </ul>
+      <p>You should have the following! If you don't, double check the previous labs or ask for help on GitHub
+        Discussions.</p>
+      <img class="image" src="assets/2401.png"
+        alt="The contact form page with labels and fields for name, email, and message">
+      <h2>Portfolio</h2>
+      <p>Flesh out the details of your <code>portfolio.html</code> to include <em>this</em> personal website project!
+      </p>
+      <ul>
+        <li>In your <code>portfolio.html</code> add an <code class="language-html">&lt;img&gt;</code> to your <code
+            class="language-html">&lt;div class="project"&gt;</code>.
+          You can use a screenshot of the home page or a filler image to represent a website.</li>
+        <li>Wrap that image in an anchor tag, <code class="language-html">&lt;a href="index.html"&gt;</code>. This will
+          make the image a link which leads back to your home page.</li>
+        <p class="note"><strong>Note:</strong>Remember, if your image is too big you can use the <code>width</code> and
+          <code>height</code> attributes to make it smaller for now.
+        </p>
+        <li>In your <code>portfolio.html</code>, add a <code class="language-html">&lt;div&gt;</code> after the <code
+            class="language-html">&lt;img&gt;</code>. Give it the <code>class="project-details"</code> attribute.</li>
+        <li>In your <code>portfolio.html</code>, add 2 <code class="language-html">&lt;p&gt;</code> paragraphs to
+          the <code class="language-html">&lt;div class="project-details"&gt;</code>. Give the first one a
+          <code>class="project-name"</code>
+          attribute and the one under a <code>class="project-description"</code>.
+        </li>
+        <li>Put some text in the two paragraphs. A name for your website and a description.</li>
+        <li> In your <code>portfolio.html</code>, add an anchor tag beneath the two paragraphs in <code
+            class="language-html">&lt;div class="project-details"&gt;</code>. Link it to your <code>index.html</code>
+          and give it the content "Learn More" or something similar.</li>
+      </ul>
+      <p>Make sure your page looks similar to this and both your image and text link works. Get help if you need it!</p>
+      <img class="image" src="assets/2402.png"
+        alt="The blog.html page with project image, project name, and project description">
+      <h2>Resume</h2>
+      <p>The recommended sections of your digital resume you should have from the previous Lab 18 and Lab 21 are
+        <strong>Education</strong>, <strong>Coursework</strong>, <strong>Skills</strong>, <strong>Projects</strong>,
+        and <strong>Experience</strong>. You can have them in whatever order you would like and as many other sections
+        as you want, but we'll be adding content to these sections in particular!
+      </p>
+      <p>Just like your real resume, you may want to consider putting your best assets up front. If you don't
+        have a lot of experience, put more focus on your skills or projects. Fill out the following requirements
+        with your real information as best as you can!</p>
+      <ul>
+        <li>In your <code>resume.html</code>, add an <code class="language-html">&lt;a href="resume.pdf" download
+            &gt;</code> beneath the <code class="language-html">&lt;h1 class="page-title"&gt;</code>. Give it the
+          content "Download Resume".</li>
+        <p class="note"><strong>Note:</strong> This makes a link which downloads a file you link. If you
+          put your resume in the same directory, it will download when this link is clicked. Change the name of
+          the <code>href</code> as needed.</p>
+        <li>In your <code>resume.html</code>, add a <code class="language-html">&lt;div class="entry"&gt;</code>
+          under the <code class="language-html">&lt;h1 class="section-title"&gt;</code> heading for
+          <strong>Education</strong>, <strong>Experience</strong>, and <strong>Projects</strong>.
+        </li>
+        <li>In your <code>resume.html</code>, add a <code class="language-html">&lt;h3 class="entry-title"&gt;</code>
+          heading in each <code class="language-html">&lt;div class="entry"&gt;</code>.</li>
+        <li>In your <code>resume.html</code>, add a <code class="language-html">&lt;p class="entry-info"&gt;</code>
+          paragraph in each <code class="language-html">&lt;div class="entry"&gt;</code></li>
+        <li>In your <code>resume.html</code>, add a <code class="language-html">&lt;p
+            class="entry-description"&gt;</code>
+          heading in the <code class="language-html">&lt;div class="entry"&gt;</code> for <strong>Experience</strong>
+          and <strong>Projects</strong></li>
+        <li>In your <code>resume.html</code>, add an <code class="language-html">&lt;ul&gt;</code>
+          under <strong>Coursework</strong> and <strong>Skills</strong>. Give it either the
+          <code>class="course-list"</code> or <code>class="skill-list"</code> attribute.
+        </li>
+        <p class="note">Fill out each section with your information. If there are other sections you've added that have
+          entries, repeat the steps above or add your own semantic HTML.</p>
+      </ul>
+      <p>This is what we have, but yours may be different. If there is something you want to do, but don't know how to
+        then make
+        a post in GitHub Discussions.</p>
+      <video class="video" controls>
+        <source src="assets/2401.mp4" type="video/mp4">
+      </video>
+      <h2>Finish Your HTML!</h2>
+      <p>You're all done with your HTML! Your home page, <code>index.html</code>, won't have anything new aside from
+        your about information. Same goes for your <code>blog.html</code>. In the next lab, we'll wrap up some final
+        HTML thoughts and then we'll get your website on GitHub and on the Internet for everyone to see. After that, we'll start learning about CSS and how to
+        make your website as beautiful as you are!</p>
 
     </div>
   </main>
