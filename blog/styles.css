@@ -1,3 +1,11 @@
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -7,7 +15,8 @@
     color: var(--cg-white); */
     background-color: var(--cg-white);
     color: var(--cg-black);
-    padding: 0px 0px;
+    padding: 50px 50px;
+    width: 70%;
     gap: 1rem;
 }
 
@@ -18,10 +27,10 @@
 #comment-container {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 90%;
     margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    border-top: 2px solid #ccc;
     padding: 20px;
     background-color: #fff;
 }
