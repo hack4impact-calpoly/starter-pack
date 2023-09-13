@@ -103,21 +103,7 @@ const labs = [
   "Tables and Forms",
   "Even More HTML",
   "Semantic HTML",
-  "Embedded Content",
-  "Applying CSS",
-  "Selectors, Properties, and Values",
-  "Class and ID Selectors",
-  "Grouping and Nesting",
-  "Psuedo Classes",
-  "Pseudo Elements",
-  "Specificity",
-  "Display",
-  "Colors",
-  "Text",
-  "Margins and Padding",
-  "Borders",
-  "You Did It!",
-  "Acknowledgements, References, and Resources",
+  "Cascading Style Sheets",
 ];
 
 function generateNav() {
