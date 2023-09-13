@@ -397,6 +397,11 @@ div > .file {
   border-bottom-right-radius: 0 !important;
 }
 
+.commit-labels,
+.branchLabel {
+  font-family: monospace;
+}
+
 /* Footer
 ------------------------------------------------------------------- */
 

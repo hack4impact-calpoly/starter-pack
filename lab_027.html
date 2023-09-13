@@ -3,7 +3,7 @@
 
 <head>
   <title>
-    Lab  - Git
+    Lab 27 - Tracking Branches
   </title>
   <meta charset="UTF-8" />
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
@@ -16,7 +16,7 @@
   <link href="css/prism.css" rel="stylesheet" />
 </head>
 
-<body data-lab-id="">
+<body data-lab-id="27">
   <a class="skip-to-content" href="#content" tabindex="1">
     Skip to content
   </a>
@@ -37,14 +37,135 @@
     </nav>
     <div id="content" tabindex="-1">
       <h1 class="lab_title">
-        <em>Lab </em>
-        Git
+        <em>Lab 27</em>
+        Tracking Branches
       </h1>
 
       <h2>Goals</h2>
       <ul>
-        <li>Learn about <code>Git</code></li>
+        <li>Learn how to track a <code>Git</code> branch remotely</li>
       </ul>
+      <h2>Branches</h2>
+      <p>Now that we're connected, we have to <em>track our branch</em>. Much like how we had to track our files when we
+        first
+        add them, when we first connect to a remote repository, we have to track the <strong>branch</strong> we're on.
+      </p>
+      <p>If <code class="language-git">git commits</code> are a way to keep track of the changes to your code over time,
+        <em>branches</em> are a way to keep track of different versions of your code. Every <code>Git</code> repository
+        has a <strong>main</strong> branch and can be represented as a series of commits with their hash-values
+        attached.
+      </p>
+      <pre class="mermaid">
+        gitGraph
+        commit
+        commit
+        commit
+        commit
+        commit
+      </pre>
+      <p>Let's say we have a new feature we want to add to our website. However, we don't want to mess with the code we
+        currently have.
+        We can create a new branch for this new feature.</p>
+      <pre class="mermaid">
+        gitGraph
+        commit
+        commit
+        commit
+        commit
+        commit
+        branch develop
+        checkout develop
+      </pre>
+      <p>This new branch would reference the <strong>main</strong> branch from when it was created. We could make all
+        our changes for the new feature on this new branch.
+      </p>
+      <pre class="mermaid">
+        gitGraph
+        commit
+        commit
+        commit
+        commit
+        commit
+        branch develop
+        checkout develop
+        commit
+        commit
+        commit
+      </pre>
+      <p>When done, we could <strong>merge</strong> our changes from our developing branch back into our main branch.
+      </p>
+      <pre class="mermaid">
+        gitGraph
+        commit
+        commit
+        commit
+        commit
+        commit
+        branch develop
+        checkout develop
+        commit
+        commit
+        commit
+        checkout main
+        merge develop
+      </pre>
+      <p>Branches are often used when multiple people are collaborating on a project's repository. It can get pretty
+        complicated pretty quickly. For example, try to understand what's happening in the <code>git graph</code> below.
+      </p>
+      <pre class="mermaid">
+        gitGraph
+        commit
+        commit
+        branch test
+        checkout test
+        commit
+        checkout main
+        commit
+        commit
+        commit
+        branch develop
+        checkout develop
+        commit
+        commit
+        commit
+        checkout main
+        commit
+        commit
+        branch feature
+        checkout feature
+        commit
+        commit
+        commit
+        checkout main
+        merge develop
+        commit
+        merge feature
+      </pre>
+      <h2>Track Our Branch</h2>
+      <p>First, let's rename our branch to <code>main</code>.</p>
+      <h3><b>Execute</b></h3>
+      <pre class="command-line" data-prompt="$"><code class="language-git">git branch -M main</code></pre>
+      <p>Then we'll track our branch using the following command.</p>
+      <h3><b>Execute</b></h3>
+      <pre class="command-line" data-prompt="$"><code class="language-git">git push -u origin main</code></pre>
+      <p class="note"><code>-u</code> is short for <code>--set-upstream</code>. If you ever see that, it means the
+      same thing and that you need to track your local branch remotely.</p>
+      <h3><b>Output</b></h3>
+      <pre class="command-line" data-prompt="$" data-filter-output="(out)"><code class="language-git">git push -u origin main
+(out)Enumerating objects: 23, done.
+(out)Counting objects: 100% (23/23), done.
+(out)Delta compression using up to 8 threads
+(out)Compressing objects: 100% (21/21), done.
+(out)Writing objects: 100% (23/23), 3.24 MiB | 2.95 MiB/s, done.
+(out)Total 23 (delta 11), reused 0 (delta 0), pack-reused 0
+(out)remote: Resolving deltas: 100% (11/11), done.
+(out)To https://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git
+(out) * [new branch]      main -> main
+(out)branch 'main' set up to track 'origin/main'.
+(out)</code></pre>
+      <p>Now if you go to the repository on GitHub, you should see all your local files uploaded to the remote repository!</p>
+      <img src="assets/2701.png" alt="GitHub repository with all the local files uploaded">
+
 
 
     </div>

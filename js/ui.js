@@ -103,6 +103,8 @@ const labs = [
   "Tables and Forms",
   "Even More HTML",
   "Semantic HTML",
+  "Remote Repositories",
+  "Tracking Branches",
   "Cascading Style Sheets",
 ];
 

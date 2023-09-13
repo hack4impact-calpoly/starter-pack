@@ -3,7 +3,7 @@
 
 <head>
   <title>
-    Lab  - Git
+    Lab 26 - Remote Repositories
   </title>
   <meta charset="UTF-8" />
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
@@ -16,7 +16,7 @@
   <link href="css/prism.css" rel="stylesheet" />
 </head>
 
-<body data-lab-id="">
+<body data-lab-id="26">
   <a class="skip-to-content" href="#content" tabindex="1">
     Skip to content
   </a>
@@ -37,14 +37,92 @@
     </nav>
     <div id="content" tabindex="-1">
       <h1 class="lab_title">
-        <em>Lab </em>
-        Git
+        <em>Lab 26</em>
+        Remote Repositories
       </h1>
 
       <h2>Goals</h2>
       <ul>
-        <li>Learn about <code>Git</code></li>
+        <li>Create your first GitHub repository and connect to it</li>
       </ul>
+      <h2>GitHub Repository</h2>
+      <p>Speaking of discover-ability, so far you have been working and accessing your page on your own browser and
+        local system. However, the whole point of a website is for people to visit it. You also have a log
+        of your coding history in your local <code>Git</code> repository. Local repositories are hard to access on other
+        computers and are susceptible to disappearing forever if your computer dies.</p>
+      <p>It's time to connect your <em>local repository</em> to a <strong>remote repository</strong> on GitHub. This
+        will serve the dual purpose of hosting your local repository on more resilient servers and also make use of a
+        GitHub feature called <strong>GitHub pages</strong> which will let you host your own website for free!</p>
+      <h2>Make a Remote Repository</h2>
+      <p>Log in or go to GitHub and follow the instructions below to make a remotely hosted repository on GitHub
+        servers.</p>
+      <video class="video" controls>
+        <source src="assets/2601.mp4" type="video/mp4">
+      </video>
+      <ol>
+        <li>From your GitHub homepage, click the circular profile icon in the top-right corner of the screen</li>
+        <li>From the dropdown menu, go to <strong>Your respositories</strong></li>
+        <li>In your repository list, click the bright, green button that says <strong>New</strong></li>
+        <li>Name your repository <code>&lt;username&gt;-github.io</code> and keep it public</li>
+      </ol>
+      <h2>Connect Local Repo to Remote Repo</h2>
+      <p>When you make your repository you should see this screen.</p>
+      <img class="image" src="assets/2601.png" alt="A newly created GitHub repository">
+      <p>GitHub provides some useful snippets of code to connect to a remote repository.
+        Since we have an existing repository, let's go with the <em>second option</em> and <strong>push an existing
+          repository
+          from the command line</strong>!</p>
+      <h3><b>Execute</b></h3>
+      <pre class="command-line" data-prompt="$"><code class="language-git">git remote add origin
+https://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git</code></pre>
+      <p class="note"><strong>Note:</strong> Replace <code>&lt;username&gt;</code> with your username.</p>
+      <p>To check if you are connected, run the following command:</p>
+      <h3><b>Execute</b></h3>
+      <pre class="command-line" data-prompt="$"><code class="language-git">git remote -v</code></pre>
+      <h3><b>Output</b></h3>
+      <pre class="command-line" data-prompt="$" data-filter-output="(out)"><code class="language-git">git remote -v
+(out)origin https://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git (fetch)
+(out)origin https://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git (push)</code></pre>
+      <p class="note"><strong>Note:</strong> <code>origin</code> is the reference to your remote <code>Git</code> repository.</p>
+      <h2>Using a Distributed VCS</h2>
+      <p>Now that we're connected to a remote repository, it adds a few new commands that we have to remember. Before,
+        we
+        would <strong>stage</strong> our changes and then <strong>commit</strong> them to our local repository. Now, we
+        also need to remember to <strong>push</strong> our committed local changes to our remote repository.</p>
+      <p>In Lab 6 we talked about <em>distributed version control systems</em>. The new <strong>git push</strong> fits
+        in like so.</p>
+      <pre class="mermaid">
+        flowchart LR
+        subgraph server [server]
+        direction TB
+        subgraph database
+        direction TB
+        v1[version 1]
+        v2[version 2]
+        v3[version 3]
+        v3---v2---v1
+        end
+        end
+        subgraph cpa [computer a]
+        direction TB
+        subgraph databasea [database]
+        direction TB
+        v1a[version 1]
+        v2a[version 2]
+        v3a[version 3]
+        v3a--commit---v2a
+        v2a--commit---v1a
+        end
+        fa[file]
+        fa---databasea
+        end
+        cpa--push-->server
+        server-->cpa
+        classDef node font-family:monospace,font-size:14px
+        classDef clusters font-family:monospace,font-size:14px
+        classDef cluster rx:5px,ry:5px
+        classDef edgeLabel font-family:monospace,font-size:14px
+      </pre> 
 
 
     </div>
