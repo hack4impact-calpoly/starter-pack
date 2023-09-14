@@ -108,7 +108,7 @@ const labs = [
   "On the Web",
   "Cascading Style Sheets",
   "Selectors",
-  "Pseudo Classes and Pseudo Elements",
+  "Pseudo Classes",
   "Grouping and Nesting",
   "Specificity",
   "Colors and Text",

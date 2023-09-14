@@ -6,3 +6,16 @@ a:link {
 a:visited {
   color: purple;
 }
+
+a:active {
+  color: red;
+}
+
+a:hover {
+  color: green;
+  text-decoration: none;
+}
+
+input:focus {
+  border: 1px solid #aaa;
+}

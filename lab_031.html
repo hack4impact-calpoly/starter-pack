@@ -38,7 +38,7 @@
     <div id="content" tabindex="-1">
       <h1 class="lab_title">
         <em>Lab 31</em>
-        Pseudo Classes and Pseudo Elements
+        Pseudo Classes
       </h1>
 
       <h2>Goals</h2>
@@ -47,19 +47,22 @@
       </ul>
       <h2>Pseudo Classes</h2>
       <p><em>Pseudo classes</em> are an extra add-on to CSS selectors that make selections
-      that much more specific. They target an element's state or interaction. 
-      The ones we will talk about are <code class="language-css">link</code>,
-      <code class="language-css">visited</code>, <code class="language-css">active</code>,
-      <code class="language-css">hover</code>, and <code class="language-css">focus</code>.</p>
-      <pre class="file line-numbers" data-range="1,8" data-src="prism/css/3101.css"></pre>
+        that much more specific. They target an element's state or interaction.
+        The ones we will talk about are <code class="language-css">link</code>,
+        <code class="language-css">visited</code>, <code class="language-css">active</code>,
+        <code class="language-css">hover</code>, and <code class="language-css">focus</code>.
+      </p>
+      <p>The pseudo classes below target <em>unvisited</em> and <em>visited</em> links respectively. The styles will
+        apply depending on whether the user has visited the page before.</p>
+      <pre data-range="1,8" data-src="prism/css/3101.css"></pre>
+      <p>The following pseudo classes handle interactions with link.</p>
+      <ul>
+        <li><strong>Active</strong> handles the user activating, or clicking on, something e.g. the link.</li>
+        <li><strong>Hover</strong> handles user input moving over the element e.g. a mouse hovering over a link</li>
+        <li><strong>Focus</strong> handles when something is selected by, or is ready for, keyboard input</li>
+      </ul>
 
-      <h2>Pseudo Elements</h2>
-      <p><em>Pseudo elements</em> are attached in the exact same way as pseudo classes,
-      but instead of targeting an element's state, it targets some part of the element's content
-      that doesn't necessarily exist in the HTML structure. We'll cover <code class="language-css">first-letter</code>,
-      <code class="language-css">first-line</code>, <code class="language-css">before</code>, and 
-      <code class="language-css">after</code>.</p>
-
+      <pre data-range="10, 21" data-src="prism/css/3101.css"></pre>
 
     </div>
   </main>

@@ -384,17 +384,20 @@ text.actor,
   display: flex;
 }
 
+.side-by-side-container:first-child {
+  border-bottom-right-radius: 0 !important;
+}
+
 .side-by-side-child:first-child {
   flex-grow: 1;
+  /* border-bottom-right-radius: 0 !important;  
+* TODO: figure out why this stying is not working 
+* */
 }
 
 .side-by-side-child:last-child {
   flex-basis: 1;
   margin: 0 0 0.5rem 0;
-}
-
-div > .file {
-  border-bottom-right-radius: 0 !important;
 }
 
 .commit-labels,
