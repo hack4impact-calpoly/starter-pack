@@ -47,20 +47,40 @@
         <li>Learn how to calculate a specificity value</li>
       </ul>
       <h2>Cascading</h2>
-      <p>If you have two style rules with the <strong>same</strong> selector, then the selector that appears <strong>last</strong>
-      will have its style applied. For example, trying to select paragraph elements twice with two styles
-      like so:</p>
+      <p>If you have two style rules with the <strong>same</strong> selector, then the selector that appears
+        <strong>last</strong>
+        will have its style applied. For example, trying to select paragraph elements twice with two styles
+        like so:
+      </p>
       <pre data-range="1, 7" data-src="prism/css/3301.css"></pre>
       <p>The second HTML paragraph selector is last so it will take precedence. The text color will be blue.</p>
       <h2>The More Specific, the Better</h2>
-      <p>Okay, not really...<em>but</em> in CSS when there are conflicting style rules, the winner 
-      is decided by <strong>specificity</strong>. You are unlikely to have a situation where you select the same element twice,
-      however conflicts with <em>nested elements</em> are more likely to occur:</p>
+      <p>Okay, not really...<em>but</em> in CSS when there are conflicting style rules, the winner
+        is decided by <strong>specificity</strong>. You are unlikely to have a situation where you select the same
+        element twice,
+        however conflicts with <em>nested elements</em> are more likely to occur:</p>
       <pre data-range="9, 15" data-src="prism/css/3301.css"></pre>
-     <p>Since the rule for the  <code class="language-html">&lt;p&gt;</code> blue text color comes last, it may seem as though 
-        that will be the rule that is applied, <em>however</em> that is not the case. The <code>div p</code> rule is more 
-        <strong>specific</strong> so it is given <strong>more importance</strong>.</p> 
-      
+      <p>Since the rule for the <code class="language-html">&lt;p&gt;</code> blue text color comes last, it may seem as
+        though
+        that will be the rule that is applied, <em>however</em> that is not the case. The first rule is more
+        <strong>specific</strong> so it is given <strong>more importance</strong>.
+      </p>
+      <h2>Calculating Specificity</h2>
+      <p>A quick and easy way to calculate specificity is to assign different selectors, different values.
+        Give every <strong>ID selector</strong> a value of <strong>100</strong>. Ever <strong>class selector</strong>
+        a value of <strong>10</strong>. And every <strong>element selector</strong> a value of <strong>1</strong>.
+      </p>
+      <ul>
+        <li><code class="language-css">p</code> would have a value of <strong>1</strong></li>
+        <li><code class="language-css">div p</code> would have a value of <strong>2</strong></li>
+        <li><code class="language-css">.class</code> would have a value of <strong>10</strong></li>
+        <li><code class="language-css">div p .class</code> would have a value of <strong>12</strong></li>
+        <li><code class="language-css">#id</code> would have a value of <strong>100</strong>
+        </li>
+        <li><code class="language-css">div #id .class p</code> would have a value of <strong>112</strong></li>
+      </ul>
+      <p>In practical use, <code class="language-css">div p</code> would rule over <code class="language-css">p</code>
+        and <code class="language-css">div #id .class p</code> would rule over us all.</p>
 
 
     </div>
