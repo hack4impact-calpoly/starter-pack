@@ -46,7 +46,6 @@
         <li>Learn about HTML selectors</li>
         <li>Learn about class and id selectors</li>
         <li>Learn some advanced CSS selectors</li>
-        <li>Apply some CSS styling to your HTML page</li>
       </ul>
       <h2>CSS Selectors</h2>
       <p>If HTML has tags, CSS has <strong>selectors</strong>. Every selector has a pair of curly brackets associated
@@ -84,8 +83,8 @@
       <p>When we were coding our HTML, we added <code>classes=""</code> as attributes to various HTML tags.
         The reason we did this is so that we could group specific elements together. Now when we are coding our
         CSS, we can apply styles specifically to elements with specific classses.</p>
-      <p>Class selectors are a period followed by the class name. ID selectors are preceded with a hashmark or pound
-        symbol.</p>
+      <p>Class selectors are a period followed by the class name. ID selectors are a hashmark or pound symbol
+        followed by the ID name.</p>
       <pre data-range="11,19" data-src="prism/css/3001.css"></pre>
       <p class="note"><strong>Note:</strong> Remember that classes group multiple tags together while IDs can only be
         applied uniquely to one tag per page.</p>
@@ -97,16 +96,24 @@
       <pre data-range="21,30" data-src="prism/css/3001.css"></pre>
       <h2>Attribute Selectors</h2>
       <p>This is an advanced selector that that we'll use to style <code class="language-html">&lt;input&gt;</code>
-        tags. Attribute selectors select an element based on any attributes attached to its HTML tag.</p>
+        tags. Attribute selectors (<strong>[]</strong>) select an element based on any attributes attached to its HTML
+        tag.</p>
       <pre data-range="36,49" data-src="prism/css/3001.css"></pre>
       <h2>Child Selectors</h2>
-        <p>Child selectors are used to select elements that are direct children of another element, meaning one nested level
-        in. For example, with this HTML code:</p>
-        <pre data-range="9,31" data-src="prism/html/3001.html"></pre>
-        <p>You can use the following CSS to only draw a border around the position names and not the nested list. The position names are <thead>
-        direct children of the unordered list with the <code>id="positions-list"</code></p>
-        <pre data-range="51,55" data-src="prism/css/3001.css"></pre>
+      <p>Child selectors (<strong>&gt;</strong>) are used to select elements that are <strong>direct children</strong>
+        of another element,
+        meaning <em>one nested level down</em>. For example, with this HTML code:</p>
+      <pre data-range="9,28" data-src="prism/html/3001.html"></pre>
+      <p>You can use the following CSS to only draw a border around the position names and not the nested list. The
+        position names are <thead>
+          direct children of the unordered list with the <code>id="positions-list"</code></p>
+      <pre data-range="51,55" data-src="prism/css/3001.css"></pre>
       <h2>Adjacent Selectors</h2>
+      <p>Adjacent selectors (<strong>+</strong>) select elements that are directly after another element. For example:
+      </p>
+      <pre data-range="57,59" data-src="prism/css/3001.css"></pre>
+      <p>This CSS would select all first <code class="language-html">&lt;p&gt;</code> paragraphs immediately following any <code
+          class="language-html">&lt;h1&gt;</code> headings. Any paragraphs after that would not be selected and made bold.</p>
 
 
 

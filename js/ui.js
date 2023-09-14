@@ -72,7 +72,7 @@ function scrollViewActiveNavItem() {
   // If the active nav item exists
   if (activeItem) {
     // Scroll the active item into view within the container
-    activeItem.scrollIntoView({ behavior: "smooth", block: "center" });
+    activeItem.scrollIntoView({ behavior: "instant", block: "center" });
   }
 }
 
@@ -108,9 +108,8 @@ const labs = [
   "On the Web",
   "Cascading Style Sheets",
   "Selectors",
-  "Class and ID Selectors",
-  "Pseudo-Classes and Pseudo-Elements",
   "Colors and Text",
+  "Applying CSS",
   "Margins and Padding",
   "Borders",
   "Shorthand Properties",
