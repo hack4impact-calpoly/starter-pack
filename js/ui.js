@@ -109,7 +109,6 @@ const labs = [
   "Cascading Style Sheets",
   "Selectors",
   "Colors and Text",
-  "Applying CSS",
   "Margins and Padding",
   "Borders",
   "Shorthand Properties",
