@@ -1,0 +1,55 @@
+body {
+  font-size: 14px;
+}
+
+p {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.class {
+  color: red;
+  background-color: blue;
+}
+
+#id {
+  color: green;
+  background-color: yellow;
+}
+
+p .title {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+h1 #main-title {
+  color: red;
+  background-color: blue;
+}
+
+selector {
+  property: value;
+}
+
+/* This is a CSS comment. This CSS 
+* selects all input tags that have the 
+* required attribute. */
+input[required] {
+  letter-spacing: 2px;
+  text-decoration: underline;
+}
+
+/* This CSS selects all input tags that 
+* have a type attribute with the value "text"*/
+input[type="text"] {
+  height: 10%;
+  width: 10%;
+}
+
+#pos-list > li {
+  border-color: red;
+  border-style: dashed;
+  border-width: 1px;
+}
