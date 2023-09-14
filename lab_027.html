@@ -166,8 +166,37 @@
       <p>You should see something similar to above. 
       Now if you go to the repository on GitHub, you should see all your local files uploaded to the remote repository!</p>
       <img class="image" src="assets/2701.png" alt="GitHub repository with all the local files uploaded">
-
-
+      <h2>Stage, Commit, and Push</h2>
+      <p>Let's practice the new workflow that we have to be mindful of. Make the following changes to your <code>README.md</code>.</p>
+      <h3 class="file-heading"><em>README.md</em></h3>
+      <pre class="file line-numbers" data-line="4"><code class="language-markdown">#&ltYour Name&gt's Personal Website
+This is a personal website built using the Hack4Impact Starter Pack!
+&ltYou can add any description you want here.&gt
+[Visit it Here!](https://&lt;username&gt;.github.io)
+</code></pre>
+<h3><b>Execute</b></h3>
+<pre class="command-line" data-prompt="$"><code class="language-git">git add README.md</code></pre>
+<pre class="command-line" data-prompt="$"><code class="language-git">git commit -m "feat: add link to README.md"</code></pre>
+<h3><b>Output</b></h3>
+<pre class="command-line" data-prompt="$" data-filter-output="(out)"><code class="language-git">git commit -m "feat: add link to README.md"
+(out)[main 37d156a] feat: add link to README.md
+(out) 1 file changed, 1 insertion(+)
+(out)</code></pre>
+<p>Now, <strong>push</strong> your changes to the remote repository!</p>
+<h3><b>Execute</b></h3>
+<pre class="command-line" data-prompt="$"><code class="language-git">git push</code></pre>
+<h3><b>Output</b></h3>
+<pre class="command-line" data-prompt="$" data-filter-output="(out)"><code class="language-git">git push
+(out)Enumerating objects: 5, done.
+(out)Counting objects: 100% (5/5), done.
+(out)Delta compression using up to 8 threads
+(out)Compressing objects: 100% (3/3), done.
+(out)Writing objects: 100% (3/3), 353 bytes | 353.00 KiB/s, done.
+(out)Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+(out)remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+(out)To https://github.com/khoa-l/khoa-l.github.io.git
+(out)   67db699..37d156a  main -&gt; main
+(out)</code></pre>
 
     </div>
   </main>
