@@ -3,7 +3,7 @@
 
 <head>
   <title>
-    Lab  - Git
+    Lab 30 - Selectors
   </title>
   <meta charset="UTF-8" />
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
@@ -16,7 +16,7 @@
   <link href="css/prism.css" rel="stylesheet" />
 </head>
 
-<body data-lab-id="">
+<body data-lab-id="30">
   <a class="skip-to-content" href="#content" tabindex="1">
     Skip to content
   </a>
@@ -37,14 +37,78 @@
     </nav>
     <div id="content" tabindex="-1">
       <h1 class="lab_title">
-        <em>Lab </em>
-        Git
+        <em>Lab 30</em>
+        Selectors
       </h1>
 
       <h2>Goals</h2>
       <ul>
-        <li>Learn about <code>Git</code></li>
+        <li>Learn about HTML selectors</li>
+        <li>Learn about class and id selectors</li>
+        <li>Learn some advanced CSS selectors</li>
+        <li>Apply some CSS styling to your HTML page</li>
       </ul>
+      <h2>CSS Selectors</h2>
+      <p>If HTML has tags, CSS has <strong>selectors</strong>. Every selector has a pair of curly brackets associated
+        with it. Inside the curly brackets, are <strong>properties</strong> with a <strong>colon</strong> assigning
+        them a <strong>value</strong>. Every property is separated from another by a
+        <strong>semi-colon</strong>.</strong>
+      </p>
+
+      <pre data-range="32,34" data-src="prism/css/3001.css"></pre>
+
+      <p>It is difficult to cover <em>all</em> of the tags. If you're ever uncertain
+        if a property applies to a tag, the best choice is to just try it. The nice thing about CSS being all about
+        appearance is that you can apply a property and refresh your webpage to see if it works!
+      </p>
+      <p>Worse comes to worse, you can use the references here: <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">https://developer.mozilla.org/en-US/docs/Web/CSS/Reference</a>
+        to browse the entire list of every single CSS property and more.</p>
+      <p class="note"><strong>Note:</strong> As always, during this Starter Pack, GitHub Discussions is open for you
+        to ask for help!</p>
+      <h2>HTML Selectors</h2>
+      <p>HTML selectors are CSS selectors which apply to HTML tags. They are just the name of the HTML tag used as a
+        selector.</p>
+      <pre data-range="1,3" data-src="prism/css/3001.css"></pre>
+      <p>This will change the <code class="language-css">font-size</code> property of the HTML
+        <code class="language-html">&lt;body&gt;</code> tag to be 14px.
+      </p>
+      <p>Anything that is an HTML tag can be a CSS HTML selector. The style will apply to all
+        HTML elements that are selected. For example if you have the following:</p>
+      <pre data-range="5,9" data-src="prism/css/3001.css"></pre>
+      <p>This will make all <code class="language-html">&lt;p&gt;</code> elements in your HTML have the same
+        styling. All paragraphs will be <code class="language-css">sans-serif</code>,
+        <code class="language-css">bold</code>, and have a font size of 14px.
+      </p>
+      <h2>Class and ID Selectors</h2>
+      <p>When we were coding our HTML, we added <code>classes=""</code> as attributes to various HTML tags.
+        The reason we did this is so that we could group specific elements together. Now when we are coding our
+        CSS, we can apply styles specifically to elements with specific classses.</p>
+      <p>Class selectors are a period followed by the class name. ID selectors are preceded with a hashmark or pound
+        symbol.</p>
+      <pre data-range="11,19" data-src="prism/css/3001.css"></pre>
+      <p class="note"><strong>Note:</strong> Remember that classes group multiple tags together while IDs can only be
+        applied uniquely to one tag per page.</p>
+      <p>You can combine HTML selectors with class and ID selectors to have even more specific selection control.
+        The example below selects only <code class="language-html">&lt;p&gt;</code> paragraphs with the
+        <code>class="title"</code> affecting its font style, weight, and size. It also changes the text and background
+        color of <code class="language-html">&lt;h1&gt;</code> headings with the <code>id="main-title"</code>.
+      </p>
+      <pre data-range="21,30" data-src="prism/css/3001.css"></pre>
+      <h2>Attribute Selectors</h2>
+      <p>This is an advanced selector that that we'll use to style <code class="language-html">&lt;input&gt;</code>
+        tags. Attribute selectors select an element based on any attributes attached to its HTML tag.</p>
+      <pre data-range="36,49" data-src="prism/css/3001.css"></pre>
+      <h2>Child Selectors</h2>
+        <p>Child selectors are used to select elements that are direct children of another element, meaning one nested level
+        in. For example, with this HTML code:</p>
+        <pre data-range="9,31" data-src="prism/html/3001.html"></pre>
+        <p>You can use the following CSS to only draw a border around the position names and not the nested list. The position names are <thead>
+        direct children of the unordered list with the <code>id="positions-list"</code></p>
+        <pre data-range="51,55" data-src="prism/css/3001.css"></pre>
+      <h2>Adjacent Selectors</h2>
+
+
 
 
     </div>

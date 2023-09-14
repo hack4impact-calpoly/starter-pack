@@ -402,6 +402,18 @@ div > .file {
   font-family: monospace;
 }
 
+.neon {
+  color: #fff;
+  background: #fff;
+  font-weight: bold;
+  text-shadow:
+    -1px 1px 2px blue,
+    1px 1px 2px blue,
+    1px -1px 0 blue,
+    -1px -1px 0 blue,
+    0px 0px 15px blue;
+}
+
 /* Footer
 ------------------------------------------------------------------- */
 

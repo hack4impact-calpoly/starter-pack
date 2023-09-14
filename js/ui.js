@@ -107,6 +107,20 @@ const labs = [
   "Tracking Branches",
   "On the Web",
   "Cascading Style Sheets",
+  "Selectors",
+  "Class and ID Selectors",
+  "Pseudo-Classes and Pseudo-Elements",
+  "Colors and Text",
+  "Margins and Padding",
+  "Borders",
+  "Shorthand Properties",
+  "Rounded Corners",
+  "Shadows",
+  "Grouping and Nesting",
+  "Specificity",
+  "Display",
+  "Page Layout",
+  "Flexbox",
 ];
 
 function generateNav() {
@@ -149,6 +163,8 @@ function generateFooterNavigation() {
       "Next",
     );
     footerNav.appendChild(nextAnchor);
+  } else {
+    footerNav.appendChild(document.createElement("span"));
   }
 
   footerContainer.appendChild(footerNav);
