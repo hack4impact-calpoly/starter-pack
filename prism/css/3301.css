@@ -1,0 +1,15 @@
+p {
+  color: red;
+}
+
+p {
+  color: blue;
+}
+
+div p {
+  color: red;
+}
+
+p {
+  color: blue;
+}
