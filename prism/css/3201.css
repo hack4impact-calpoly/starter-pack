@@ -1,0 +1,29 @@
+p {
+  color: #000;
+}
+
+h1 {
+  color: #000;
+}
+
+.titles {
+  color: #000;
+}
+
+p,
+h1,
+.titles {
+  color: #000;
+}
+
+#special {
+  color: #000;
+}
+
+#special p {
+  font-weight: bold;
+}
+
+#special h1 {
+  font-size: 25px;
+}

@@ -43,8 +43,31 @@
 
       <h2>Goals</h2>
       <ul>
-        <li>Learn about <code>Git</code></li>
+        <li>Learn about grouping and nesting selectors in CSS</li>
       </ul>
+      <h2>Grouping</h2>
+      <p>You can group multiple selectors in order to give them all the same styling. Separate selectors by
+        <strong>commas</strong> before the curly brackets in order to group them.
+      </p>
+      <p>For example:</p>
+      <pre data-range="1, 11" data-src="prism/css/3201.css"></pre>
+      <p>Can be grouped into the following:</p>
+      <pre data-range="13, 17" data-src="prism/css/3201.css"></pre>
+
+      <h2>Nesting</h2>
+      <p>If you have well structured and semantic HTML, you can make use of CSS nesting in order to cut
+        down on the amount of class attributes. Separating two selectors with a <strong>space</strong> will select all
+        the descendents
+        of the first selector that <em>is</em> the second selector.</p>
+      <pre data-range="19, 29" data-src="prism/css/3201.css"></pre>
+      <p>If the HTML was:</p>
+      <pre class="line-numbers" data-range="8,12" data-src="prism/html/3201.html"></pre>
+      <p>You would be able to select the heading and paragraphs with the nested CSS instead of a class or ID attribute.
+        Separating the two selectors is the same as saying "<code class="language-html">&lt;h1&gt;</code> inside of an
+        element with <code>id="special"</code>" or "<code class="language-html">&lt;p&gt;</code> inside of an element
+        with <code>id="special"</code>".
+      </p>
+
 
 
     </div>

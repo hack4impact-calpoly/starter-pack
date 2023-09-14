@@ -18,13 +18,13 @@ p {
   background-color: yellow;
 }
 
-p .title {
+p.title {
   font-style: italic;
   font-weight: 500;
   font-size: 16px;
 }
 
-h1 #main-title {
+h1#main-title {
   color: red;
   background-color: blue;
 }
