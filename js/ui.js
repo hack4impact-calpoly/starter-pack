@@ -105,6 +105,7 @@ const labs = [
   "Semantic HTML",
   "Remote Repositories",
   "Tracking Branches",
+  "On the Web",
   "Cascading Style Sheets",
 ];
 
