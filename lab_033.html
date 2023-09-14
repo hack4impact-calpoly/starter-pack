@@ -43,8 +43,20 @@
 
       <h2>Goals</h2>
       <ul>
-        <li>Learn about <code>Git</code></li>
+        <li>Learn about specificity in CSS</li>
+        <li>Learn how to calculate a specificity value</li>
       </ul>
+      <h2>Cascading</h2>
+      <p>If you have two style rules with the <strong>same</strong> selector, then the selector that appears <strong>last</strong>
+      will have its style applied. For example, trying to select paragraph elements twice with two styles
+      like so:</p>
+      <pre data-range="1, 7" data-src="prism/css/3301.css"></pre>
+      <p>The second HTML paragraph selector is last so it will take precedence. The text color will be blue.</p>
+      <h2>The More Specific, the Better</h2>
+      <p>Okay, not really...<em>but</em> in CSS when there are conflicting style rules, the winner 
+      is decided by <strong>specificity</strong>. You are unlikely to have a situation where you select the same element twice,
+      however conflicts with <em>nested elements</em> are more likely to occur:</p>
+      <pre data-range="9, 15" data-src="prism/css/3301.css"></pre>
 
 
     </div>
