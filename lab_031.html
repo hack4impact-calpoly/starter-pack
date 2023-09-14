@@ -3,7 +3,7 @@
 
 <head>
   <title>
-    Lab 31 - Colors and Text
+    Lab 31 - Pseudo Classes and Pseudo Elements
   </title>
   <meta charset="UTF-8" />
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
@@ -38,81 +38,27 @@
     <div id="content" tabindex="-1">
       <h1 class="lab_title">
         <em>Lab 31</em>
-        Colors and Text
+        Pseudo Classes and Pseudo Elements
       </h1>
 
       <h2>Goals</h2>
       <ul>
-        <li>Learn about colors and text in CSS</li>
+        <li>Learn about pseudo classes and pseudo elements in CSS</li>
       </ul>
-      <h2>Color</h2>
-      <p>Some CSS properties take a color as its value. CSS comes with a few keywords which define built-in colors.
-        You can use <code class="language-css">red</code>,
-        <code class="language-css">aqua</code>, <code class="language-css">antiquewhite</code>,
-        <code class="language-css">blue</code>, <code class="language-css">silver</code>, <code
-          class="language-css">transparent</code>, and more to reference colors.
-      </p>
-      <p>CSS also accepts <strong>RGB</strong>, <strong>HSL</strong>, and <strong>hexadecimal</strong> colors as well.
-        If you've ever used a digital art program or Photoshop you probably know what these are, but if you don't here's
-        a quick rundown.
-      <p>
-      <ul>
-        <li><strong>RGB</strong> stands for <em>red</em>, <em>green</em>, <em>blue</em> and describes the amount of
-          each color used in combination to make other colors. Defined in CSS as
-          <code class="language-css">rgb(0, 0, 255)</code> with each number between 0 and 255.
-        </li>
-        <p class="note"><strong>Note:</strong> You can also use <strong>RGBa</strong> as <code
-            class="language-css">rgba(0, 0, 255, 0.5)</code>to define an <em>alpha</em> or transparency value between
-          0 and 1.</p>
-        <li><strong>HSL</strong> stands for <em>hue</em>, <em>saturation</em>, <em>lightness</em> and describes the
-          color in terms of these values. Defined in CSS as <code class="language-css">hsl(240, 100%, 50%)</code>
-          with the first number being the hue angle on a color wheel between 0 and 360, the second being the saturation
-          between 0% and 100%, and the third being the lightness between 0% and 100%.
-        </li>
-        <p class="note"><strong>Note:</strong> You can also use <strong>HSLa</strong> as <code
-            class="language-css">hsla(240, 100%, 50%, 0.5)</code>.</p>
+      <h2>Pseudo Classes</h2>
+      <p><em>Pseudo classes</em> are an extra add-on to CSS selectors that make selections
+      that much more specific. They target an element's state or interaction. 
+      The ones we will talk about are <code class="language-css">link</code>,
+      <code class="language-css">visited</code>, <code class="language-css">active</code>,
+      <code class="language-css">hover</code>, and <code class="language-css">focus</code>.</p>
+      <pre class="file line-numbers" data-range="1,8" data-src="prism/css/3101.css"></pre>
 
-        <li><strong>Hexadecimal</strong> colors are a way of representing RGB colors in a more compact way. Defined in
-          CSS as <code class="language-css">#0000ff</code> with the first two characters representing the amount of
-          red, the second two characters representing the amount of green, and the last two characters representing the
-          amount of blue. Each character is a hexadecimal (base-16) digit between 0 and f.</li>
-        <p class="note"><strong>Note:</strong> If the pairs share a letter it can be shortened even further to three
-          characters.
-          <code class="language-css">#0000ff</code> can be shortened to <code class="language-css">#00f</code>.
-        </p>
-      </ul>
-      <h2>Text</h2>
-      <p>The different text properties that we will consider are <code class="language-css">font-size</code>, <code
-          class="language-css">font-family</code>, <code class="language-css">font-weight</code>, <code
-          class="language-css">font-style</code>, <code class="language-css">text-decoration</code>, <code
-          class="language-css">text-transform</code>, and <code class="language-css">text-align</code>.
-      </p>
-      <p>Some of these are pretty self-explanatory, but we'll go over them!</p>
-      <ul>
-        <li><code class="language-css">font-size</code> changes the size of the font. Common units are <code>px</code> or
-          pixels and <code>pt</code> or point like in word processing programs.</li>
-        <p class="note"><strong>Note:</strong> Make sure you don't use <code class="language-css">font-size</code>
-          as a crutch instead of proper semantic HTML e.g. headings. Headings should use the proper tags and not be
-          large font paragraphs.</p>
-        <li><code class="language-css">font-family</code> affects the actual font itself. In order to load fonts, browsers
-        will need the font to be on a website visitor's computer. There are a few <em>web-safe</em> fonts that are generally
-        available across most browsers and systems. You can define multiple comma-separated fonts as a backup in case a font
-        is not found.</li>
-        <pre><code class="language-css">font-family: Helvetica, Arial, sans-serif;</code></pre>
-        <p class="note"><strong>Note:</strong> If you want to use a font that's not a standard font,
-        we highly recommend using Google's Web Fonts. Their tutorial on how to import them is here:
-        <a href="https://developers.google.com/fonts/docs/css2" target="_blank" rel="noopener">https://developers.google.com/fonts/docs/css2</a></p>
-        <li><code class="language-css">font-weight</code> determines whether a font is <code>bold</code> or <code>normal</code>. You can also
-        specify weights in numbers e.g. (100, 200, 500) but we suggest sticking with <code>bold</code> or <code>normal</code>.</li>
-        <li><code class="language-css">font-style</code> determines whether a text is <code>italic</code> or not.</li>
-        <li><code class="language-css">text-decoration</code> describes lines above, through, or below text. It can take the following
-        values: <code>underline</code>, <code>overline</code>,  <code>line-through</code> and <code>none</code>.</li>
-        <li><code class="language-css">text-transform</code> will change the case of the text. It can take the following
-        values: <code>capitalize</code>, <code>lowercase</code>, <code>uppercase</code>, and  <code>none</code>.</li>
-<li><code class="language-css">text-align</code> will align text within it's parent container. It can take the following
-        values: <code>left</code>, <code>right</code>, <code>center</code>, and  <code>justify</code>.</li>
-
-      </ul>
+      <h2>Pseudo Elements</h2>
+      <p><em>Pseudo elements</em> are attached in the exact same way as pseudo classes,
+      but instead of targeting an element's state, it targets some part of the element's content
+      that doesn't necessarily exist in the HTML structure. We'll cover <code class="language-css">first-letter</code>,
+      <code class="language-css">first-line</code>, <code class="language-css">before</code>, and 
+      <code class="language-css">after</code>.</p>
 
 
     </div>
