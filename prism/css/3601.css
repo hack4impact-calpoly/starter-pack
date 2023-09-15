@@ -1,0 +1,25 @@
+p {
+  margin-top: 1px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+p {
+  margin: 1px 5px 10px 20px;
+}
+
+div {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000;
+}
+
+div {
+  border: 1px solid #000;
+}
+
+div {
+  border-top: 1px solid #000;
+  border-left: 2px solid #fff;
+}

@@ -3,7 +3,7 @@
 
 <head>
   <title>
-    Lab 36 - Borders
+    Lab 36 - Shorthand Properties
   </title>
   <meta charset="UTF-8" />
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
@@ -38,13 +38,38 @@
     <div id="content" tabindex="-1">
       <h1 class="lab_title">
         <em>Lab 36</em>
-        Borders
+        Shorthand Properties
       </h1>
 
       <h2>Goals</h2>
       <ul>
-        <li>Learn about borders in CSS</li>
+        <li>Learn the shorthand for specific CSS properties</li>
       </ul>
+      <h2>Margins and Padding</h2>
+      <p>Both margins and padding have a shorthand that amalgamates multiple properties into one property. This
+        shorthand property takes a space-separated string of values instead of just one.</p>
+      <p>The four margin properties, <code class="language-css">margin-top</code>, <code
+          class="language-css">margin-right</code>, <code class="language-css">margin-bottom</code>, and <code
+          class="language-css">margin-left</code> can all be condensed into the <code class="language-css">margin</code>
+        property. The order of the <code class="language-css">margin</code> property values is <code
+          class="language-css">margin: top right bottom left</code>. The following definition shows this:</p>
+      <pre data-range="1,10" data-src="prism/css/3601.css"></pre>
+      <p class="note"><strong>Note:</strong> If you only put two values instead of four, <code
+          class="language-css">margin: 5px 10px</code>, the first will be used for both top <em>and</em> bottom
+        and the second for left <em>and</em> right.</p>
+      <p>The same format of shorthand works for combining <code class="language-css">padding-top</code>, <code
+          class="language-css">padding-right</code>, <code class="language-css">padding-bottom</code>, and <code
+          class="language-css">padding-left</code> into <code class="language-css">padding</code>.
+      </p>
+      <h2>Borders</h2>
+      <p><code class="language-css">border-width</code>, <code class="language-css">border-style</code>, and <code
+          class="language-css">border-color</code> can all be combined into one <code class="language-css">border</code>
+        property. This shorthand combination can also be applied to specific border edges i.e. <code
+          class="language-css">border-top</code>, <code class="language-css">border-right</code>, <code
+          class="language-css">border-bottom</code>, and <code class="language-css">border-left</code>.</p>
+      <p>Here's a few examples of the shorthand:</p>
+      <pre data-range="12,25" data-src="prism/css/3601.css"></pre>
+      <h2>Fonts</h2>
 
 
     </div>
