@@ -18,6 +18,8 @@ main {
   align-items: center;
 }
 
+/* CSS for navigation bar */
+
 .navbar {
   position: -webkit-sticky;
   position: sticky;
@@ -35,6 +37,7 @@ main {
   color: white;
   padding: 0px 0px;
 
+  /* Debug border */
   /* border: solid red; */
 }
 
@@ -53,6 +56,8 @@ main {
   text-decoration: none;
   letter-spacing: 2px;
 }
+
+/* CSS for page footer */
 
 .footer {
   display: flex;
