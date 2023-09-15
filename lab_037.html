@@ -52,8 +52,7 @@
       <p>Most browsers have a default representation of each HTML element that consists of default font styles,
         margins, padding, and <strong>display types</strong>. However, just like you can change font styles, margins,
         and padding - you can change the display type to get the behavior and layout you want.</p>
-      <p>There are four display types we'll focus on: <strong>inline</strong>, <strong>block</strong>,
-        <strong>flex</strong>, and <strong>grid</strong>.
+      <p>There are three display types we'll focus on: <strong>inline</strong>, <strong>block</strong>, and <strong>flex</strong>.
       </p>
       <p class="note"><strong>Note:</strong> You can also do <code class="language-css">display: none</code> which hides
         the element.</p>
@@ -70,14 +69,32 @@
         <code class="language-html">&lt;h1&gt;</code> are all examples of block-level elements.
       </p>
       <p class="note"><strong>Note:</strong> Children and descendant HTML elements of an element using a display type
-        will inherit the display type of their parent. If your <code class="language-html">&lt;div&gt;</code> has a 
-        <code class="language-css">display: block</code> then descendents of the  <code class="language-html">&lt;div&gt;</code>
-        will also have <code class="language-css">display: block</code>.</p>
+        will inherit the display type of their parent. If your <code class="language-html">&lt;div&gt;</code> has a
+        <code class="language-css">display: block</code> then descendants of the <code
+          class="language-html">&lt;div&gt;</code>
+        will also have <code class="language-css">display: block</code>.
+      </p>
       <h2>Flex</h2>
-      <p><em>Flex</em> elements behave like block-level elements, however they are set up to be optimized for user interface
-        design and the one-dimensional layout of items.</p>
-      <h2>Grid</h2>
-
+      <p><em>Flex</em> elements behave like block-level elements, however they are optimized for user
+        interface design and the one-dimensional layout of items. When an element is applied <code
+          class="language-css">display: flex</code>, its children become <code class="language-css">flex items</code>
+        and its elements are laid out according to the <strong>flexible box</strong>, or <strong>flexbox</strong>,
+        layout model.
+      </p>
+      <p>In the flexbox model, descendant items can "flex" their width and height to grow or shrink as necessary.
+        Either, growing to fill unused space, <code class="language-css">flex-grow</code>, or shrinking to avoid
+        overflowing the parent, <code class="language-css">flex-shrink</code>.</p>
+      <p>Horizontal and vertical alignment are easiest in a flexbox model using <code
+          class="language-css">justify-content</code> and <code class="language-css">align-items</code>. There are
+        specific properties that only work when an element is using the flexbox
+        layout model.</p>
+      <p>For more information, this article can explain flexbox better than we ever could: <a
+          href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank"
+          rel="noopener">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a>.</p>
+      <h2>Apply Displays</h2>
+      <p>Take a look at the full style sheet to try and understand how the displays are being used. We make <em>liberal</em>
+        use of <code class="language-css">display: flex</code> in our styling. Afterwards, apply display types to your
+        website to give it the layout that you want!</p>
 
     </div>
   </main>
