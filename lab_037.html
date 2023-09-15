@@ -45,6 +45,38 @@
       <ul>
         <li>Learn about different display types in CSS</li>
       </ul>
+      <h2>Display Types</h2>
+      <p>The final thing we'll cover in CSS are the <em>display types</em> and the <code
+          class="language-css">display</code> property. <code class="language-css">display</code> is how you manipulate
+        HTML elements to present themselves in a specific way. </p>
+      <p>Most browsers have a default representation of each HTML element that consists of default font styles,
+        margins, padding, and <strong>display types</strong>. However, just like you can change font styles, margins,
+        and padding - you can change the display type to get the behavior and layout you want.</p>
+      <p>There are four display types we'll focus on: <strong>inline</strong>, <strong>block</strong>,
+        <strong>flex</strong>, and <strong>grid</strong>.
+      </p>
+      <p class="note"><strong>Note:</strong> You can also do <code class="language-css">display: none</code> which hides
+        the element.</p>
+      <h2>Inline</h2>
+      <p><em>Inline</em> display does exactly what's on the label. When applied to to an element it treats it as in line
+        with other elements. The next element will be placed adjacent to the applied element without a line break and
+        the applied element will only take up as much width as necessary.</p>
+      <p id="anchor-example"><a href="#anchor-example">Anchor links</a> and <em>emphasis</em> are two HTML elements
+        which are rendered inline by default.</p>
+      <h2>Block</h2>
+      <p><em>Block</em> elements, on the other hand, generate a <em>block-level</em> element. A block-level element
+        takes up the entire width given to it and generates with line breaks before and after the element. <code
+          class="language-html">&lt;p&gt;</code>, <code class="language-html">&lt;div&gt;</code>, and
+        <code class="language-html">&lt;h1&gt;</code> are all examples of block-level elements.
+      </p>
+      <p class="note"><strong>Note:</strong> Children and descendant HTML elements of an element using a display type
+        will inherit the display type of their parent. If your <code class="language-html">&lt;div&gt;</code> has a 
+        <code class="language-css">display: block</code> then descendents of the  <code class="language-html">&lt;div&gt;</code>
+        will also have <code class="language-css">display: block</code>.</p>
+      <h2>Flex</h2>
+      <p><em>Flex</em> elements behave like block-level elements, however they are set up to be optimized for user interface
+        design and the one-dimensional layout of items.</p>
+      <h2>Grid</h2>
 
 
     </div>
