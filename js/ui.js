@@ -115,6 +115,7 @@ const labs = [
   "Margins, Padding, and Borders",
   "Shorthand Properties",
   "Display",
+  "Completing the Starter Pack",
 ];
 
 function generateNav() {
