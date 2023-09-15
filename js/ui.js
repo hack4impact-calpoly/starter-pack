@@ -115,8 +115,6 @@ const labs = [
   "Margins, Padding, and Borders",
   "Shorthand Properties",
   "Display",
-  "Page Layout",
-  "Flexbox",
 ];
 
 function generateNav() {
