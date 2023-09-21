@@ -99,6 +99,10 @@ body {
     cursor: not-allowed;
 }
 
+#trash-icon:hover {
+    cursor: pointer;
+}
+
 /* .comment-container {
     display: flex;
     flex-direction: column;
@@ -187,6 +191,11 @@ label > textarea {
 .content h6 {
     margin-top: 1.2em;
     margin-bottom: 0.6em;
+    font-weight: bold;
+}
+
+.blog-title {
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
