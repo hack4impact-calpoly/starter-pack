@@ -1,13 +1,12 @@
-// read blog posts from the file system and preview in blog.html, linking them to the full post
-
+// Define the BlogPreview type, which represents a preview of a blog post
 type BlogPreview = {
-    slug: string;
-    title: string;
-    date: string;
-    description: string;
+    slug: string; // the slug is the name of the HTML file for the blog post
+    title: string; // the title of the blog post
+    date: string; // the date the blog post was published
+    description: string; // a short description of the blog post
 };
 
-// dummy data, where slug is the name of the html file
+// Define some dummy data for the blog previews
 const blogPosts: BlogPreview[] = [
     {
         slug: "test_file",
@@ -23,15 +22,21 @@ const blogPosts: BlogPreview[] = [
     },
 ];
 
-/** show blog posts in blog.html, manipulate the DOM */
+/**
+ * Display the blog previews in the blog.html page by manipulating the DOM.
+ * This function sorts the blog previews by date, creates a preview for each blog post,
+ * and appends the previews to the blog list element in the HTML.
+ */
 function displayBlogPreview() {
-    // sort blogs by date
+    // Sort the blog previews by date
     blogPosts.sort((a, b) => {
         return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
+
+    // Get the blog list element from the HTML
     const blogList = document.getElementById("blog-list");
 
-    // create a preview for each blog post
+    // Create a preview for each blog post and append it to the blog list element
     blogPosts.forEach(({ slug, title, date, description }) => {
         const link = document.createElement("a");
         link.href = `blog/${slug}.html`;
@@ -50,31 +55,5 @@ function displayBlogPreview() {
     });
 }
 
+// Call the displayBlogPreview function to display the blog previews in the HTML
 displayBlogPreview();
-
-/**
- * use code later
- * 
-    import { promises as fs } from "fs";
-    import path from "path";
-
-    async function getBlogPosts() {
-        const dir = path.join(__dirname, "../blog");
-        const files = (await fs.readdir(dir)).filter(
-            (file) => file !== "template.html" && file.endsWith(".html")
-        );
-
-        const posts = files.map(async (file) => {
-            let filePath = path.join(dir, file);
-            const fileData = await fs.readFile(filePath, "utf-8");
-            return {
-                // name: file.slice(0, -3),
-                name: file,
-                description: fileData,
-            };
-        });
-
-        return Promise.all(posts);
-    }
- * 
- */
