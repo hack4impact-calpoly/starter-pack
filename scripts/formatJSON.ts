@@ -47,7 +47,7 @@ export async function formatJSON() {
             <div class="blog-title">${parsedFile.title}</div>
             <div class="blog-date">${parsedFile.date}</div>
             <div class="blog-image">
-                <img src="${parsedFile.image}" alt="${parsedFile.title}" width="400px" height="400px" />
+                <img src="${parsedFile.image}" alt="${parsedFile.title}" />
             </div>
             <div class="blog-content">${parsedFile.content}</div>
         </div>
@@ -58,7 +58,7 @@ export async function formatJSON() {
 
         // formats data with prettier and writes it to a new html file
         outHTML = await format(outHTML, { parser: "html" });
-        filePath = filePath.slice(0, -5) + ".html";
+        filePath = parsedFile.slug + ".html";
 
         await fs.writeFile(filePath, outHTML);
     });
